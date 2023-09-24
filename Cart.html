@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.5px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+        .clear-cart, .checkout {
+            border: none;
+            background-color: rgb(220, 215, 175);
+        }
+
+        .clear-cart {
+            margin-left: 20px;
+        }
+
+        .modal-content {
+            display: grid;
+        }
+
+        .show-cart {
+            box-sizing: border-box;
+            width: 75%;
+            padding: 5px;
+            float: left;
+        }
+
+        .delete-item, .minus-item, .plus-item{
+            border: none;
+            padding: 2px 5px;
+            background-color: rgb(227, 223, 190)
+        }
+
+        .minus-item{
+            margin-right: 5px;
+        }
+
+        .plus-item {
+            margin-left: 5px;
+        }
+
+        .item-count{
+            width: 40px;
+        }
+
+        .count-table {
+            background-color: white;
+            box-sizing: border-box;
+            width: 25%;
+            padding: 5px;
+            color: black;
+        }
+
+        .t-amount {           
+            font: 18pt FreeMono monospace;
+        }
+
+        .t-amount > td{
+            border-top: 0.5px black solid;
+        }
+
+        .item-row > td {
+            border-bottom: 0.1px grey solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <!-- Cart Form -->
+    <div style="position:relative; background-color: rgb(234, 234, 234);">
+        <div class="limiter" style="width: 90%; margin-left: 5%;">
+            <br />
+            <!-- Modal -->
+            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 align="center" class="modal-title" id="exampleModalLabel">Cart</h1>
+
+                            <h3>
+                                Your Cart Selection (<span class="total-count"></span>)
+                            </h3>
+                            <hr />
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <table class="show-cart table">
+                                </table>
+                                <table class="count-table">
+                                    <tr>
+                                        <th height="40px" colspan="2" align="center" style="font-size: 20px;">Shopping Summary</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Sub-total</td>
+                                        <td>RM <span class="total-cart"></span></td>
+                                   
+                                    </tr>
+                                    <tr>
+                                        <td>Shipping</td>
+                                        <td>Free shipping</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estimated Tax</td>
+                                        <td>RM 3.50</td>
+                                    </tr>
+                                    <tr height="45px" class="t-amount">
+                                        <td>Total Amount</td>
+                                        <td>RM <span class="total-amount"></span></td>
+                                        
+                                    </tr>
+                                    <tr class="modal-footer">
+                                        <td><button class="clear-cart btn btn-danger">Clear Cart</button></td>
+                                        <td><a href="payment.html"><button type="button" class="btn checkout btn-primary">Checkout</button></a></td>
+                                    </tr>
+                                </table>
+
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>
+                        Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

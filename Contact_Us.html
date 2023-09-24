@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.5px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 250px;
+                max-width: 230px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+        * {
+        box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        }
+
+        input[type=submit] {
+        background-color: #664412;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #563434;
+        }
+
+        /* Create two columns that float next to eachother */
+        .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 70px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .column, input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <div style="text-align:center">
+          <h2 style="margin-top: 25px;">Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="images/contact-us-mobile.jpg" style="width:110%; height:500px" >
+          </div>
+          <div class="column">
+            <form action="Contact_Us.html" method="get">
+              <label for="fname" >First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email.." required>
+              <label for="message" required>Message</label>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:170px" required></textarea>
+              <input type="submit" value="Submit" onclick="doit()">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="small-container">
+        <h3>You can also contact us <br></h3>
+        <p>Via Email:<br>
+            support@hababa.com.my<br><br>
+            Via Phone:<br>
+            03-2595 5656 (24 Hours Daily)<br><br>
+            Via Social Media:<br>
+            You can also follow us on Twitter and join us on Facebook to stay updated on the latest trends and news.</p><br><br>
+      </div>
+
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        function doit()
+        {
+            var required = (document.getElementById("fname").value == "" || document.getElementById("lname").value == "" ||  document.getElementById("email").value == "" || document.getElementById("message").value == "");
+          if (!required)
+          {
+            if (confirm("Are you sure you want to submit this message?") == 1)
+            alert("Your message has successfully submitted. We will reply you as soon as possible.");
+          }    
+
+        }
+          
+        /*function doit() {
+            if (confirm("Are you sure you want to submit this message?") == 1){
+            window.alert("Your message has successfully submitted. We will reply you as soon as possible.");
+            document.book.reset();
+            window.location.reload();
+            }
+        }*/
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

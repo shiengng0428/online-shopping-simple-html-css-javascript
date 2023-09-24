@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+<style>
+    .btn-primary1 {
+        padding: 0.2px;
+        background-color: transparent;
+        border: none;
+        margin-top: 1px;
+    }
+
+        .btn-primary1 > .total-count {
+            position: absolute;
+            background-color: black;
+            margin-left: -12.5px;
+            margin-top: -1px;
+            padding: 4px 5.5px;
+            border-radius: 30px;
+        }
+
+        .btn-primary1:hover {
+            background-color: white;
+            transition: all 200ms ease-in-out;
+            border-radius: 20px;
+        }
+
+        .card > img{
+            max-height: 235px;
+            max-width: 235px;
+        }
+
+        .card-block{
+            padding-right: 5px;
+        }
+
+        .card{
+            height: 450px;
+            position: relative;
+        }
+
+        .add-to-cart{
+           position: absolute;
+           bottom: 20px;
+        }
+        
+</style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;margin-bottom: 12px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div class="aboutmargin">
+    <div id="about" class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 style="font-family:Brush Script MT, Brush Script Std, cursive; font-size: 50px;">About Company Page</h2><br>
+            <h4 style="font-family:Apple Chancery, cursive; letter-spacing:0.5px;">
+                Hababa is an online shopping site which focuses mainly on e-commerce, Hababa was launched in Malaysia<br/> in 2015 by Mr. Chia Jun Kang, and later expanded its reach to Singapore, Thailand, Taiwan, Indonesia,<br/> Vietnam, Philippines and Brazil. Hababa provides a platform which allows customers to buy goods or<br/> services from sellers over the Internet using a web browser or our app.<br/><br/><br/> 
+
+                It also allows sellers to sell their products through Hababa. Due to the mobile and social element built<br/> within the concept, Hababa has become the most popular online shopping platform in Asia. Everyone likes<br/> to buy products with low prices. The users can check out our app for some great deals where we offer them<br/> products at affordable prices.<br/><br/><br/> 
+
+                Sometimes we will release some free vouchers so that the users can claim it and use it. We also have<br/> massive sales and offers during major festivals like Chinese New Year, Hari Raya and others.<br/>Let us not forget about our big sales campaigns such as 9.9 Super Shopping Day, 10.10 Brand Awesome,<br/> 11.11 Shop ‘n’ Roll and 12.12 Pre-Christmas Sales.  This will make the price even cheaper and the buyer<br/> will feel every cent they spent is well worth it.
+
+           
+          </div>
+          <div >
+             <span class="glyphicon glyphicon-signal logo"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid bg-grey">
+        <div class="row">
+          <div >
+            <span class="glyphicon glyphicon-globe logo slideanim"></span>
+          </div>
+          <div class="col-sm-8">
+            <h2 style="font-family:Brush Script MT, Brush Script Std, cursive; font-size: 50px;">Our Values</h2><br>
+            <h4 style="font-family:Apple Chancery, cursive; letter-spacing: 0.5px;"> 
+                Hababa has also collaborated with local courier companies. For example, Poslaju, DHL Express, NinjaVan, J&T, and others. This will allow the buyers to enjoy low shipping costs and if you have spent over a certain amount and claimed our free shipping voucher, you can get it delivered to your doorsteps for free! For sellers, the shipping fee is free.
+                <br/><br/><br/>
+                 It is really simple and convenient to sell on Hababa.
+                Hababa offers online shopping security through its own escrow service called “Hababa Guarantee”, where it withholds payment to sellers until buyers have received their orders.So that the users do not need to worry about getting scam.
+                
+                </h4><br>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <div id="services" class="container-fluid text-center">
+        <h2 style="font-family:Brush Script MT, Brush Script Std, cursive; font-size: 40px;">SERVICES</h2>
+        <h4 style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">What we offer is</h4>
+        <div class="row slideanim">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4 style="font-family:Apple Chancery, cursive;">GREEN</h4>
+            
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <h4 style="font-family:Apple Chancery, cursive;">CERTIFIED</h4>
+            
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <h4 style= "font-family:Apple Chancery, cursive;">FAST DELIVERY</h4>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2 style="font-family:Brush Script MT, Brush Script Std, cursive; font-size: 50px;">some of the country we collab with</h2><br>
+        <div class="row text-center slideanim">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/thai.jpg" alt="Paris" width="400" height="300">
+              <p><strong>Thailand</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/Singapore.jpg" alt="New York" width="400" height="300">
+              <p><strong>Singapore</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/taiwan.jpeg" alt="San Francisco" width="400" height="300">
+              <p><strong>Taiwan</strong></p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>    
+    <div class="testimonial">
+        <h2 style="text-align:center; font-family: Brush Script MT, Brush Script Std, cursive; font-size: 50px;">Our Team</h2><br/>
+        <div class="small-container">
+            
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p style="color: black; font-family: URW Chancery L, cursive; font-size: 15px;" ><strong>You don’t learn to walk by following rules. You learn by doing and falling over.</strong>
+                    </p>
+                    <img src="images/user-2.png" >
+                    <h3>Chia Jun Kang</h3>
+                    <p>CEO & Founder</p>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p style="color: black; font-family: URW Chancery L, cursive;font-size: 15px;"><strong>We are a good team and know what we want to do, one of us can defeat ten of them.</strong> 
+                    </p>
+                   
+                    <img src="images/user-1.png">
+                    <h3>Fong Chu Ken</h3>
+                    <p>Project Director</p>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p style="color: black; font-family: URW Chancery L, cursive;font-size: 15px;"><strong>You want to your company to operate with wisdom and care, then women are best.</strong> </p>
+                 
+                    <img src="images/designer.jpg">
+                    <h3>Lau Shi Han</h3>
+                    <p>Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm1">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+          document.getElementById("myForm1").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm1").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+
+</body>
+</html>
+
+
+

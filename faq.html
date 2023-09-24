@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+        #more , #more1, #more2, #more3, #more4{display: none;}
+
+        .answer 
+        {
+            font-family: Apple Chancery, cursive;
+            font-style: italic;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div style="text-align:center">
+        <h1>FAQ ( Frequently Asked Question )</h1>
+    </div>
+    <br>
+    <div class="aboutmargin">
+        <div class="fqa">
+        <p style="text-align:left;color: black;"><strong>Account</strong><span id="dots"></span>
+            <div id="more"><br><br>1. How to register as a member?<br><br>
+                <div class="answer">
+                    You may follow steps below to register:<br/><br/>
+                    a Open link : <a style=" color : blue;" href="Register.html"><small>http://127.0.0.1:5500/Register.html</small></a> <br>
+                    b Fill in your username<br/>
+                    c Fill in your email address<br/>
+                    d Fill in your password<br/>
+                    e Click Register and you will receive an email notification 
+                </div>
+                    <br><br>2. How do I change the information in my account?<br><br>
+                <div class="answer"> 
+                    Not to worry, you may call our 24 hours Customer Care line or drop a message at : <a style ="color: blue" href="Contact_Us.html"><small>//127.0.0.1:5500/Contact_Us.html</small></a> 
+                    <br>We will assist you as soon as possible.
+                </div>  
+                    <br><br>3. How can I order without an account?<br><br>
+                    <div class="answer">
+                    You need to create an account before placing an order. To register, kindly register on this link: <a style="color:blue;" href="Register.html"><small>http://127.0.0.1:5500/Register.html</small></a>
+                    </div>
+                    <br><br>4. I have submitted my online account registration but there is no verification email received. What should I do?<br><br>
+                    <div class="answer">
+                        After submitting your account registration, an email with a verification link will be sent to you. If you did not receive the email in your Inbox, please check the spam or junk folder too.
+                    </div>
+                   
+                    <br><br>5. I found the verification email but the authentication link in the email is not active/working. What should I do?<br><br>
+                    <div class="answer">
+                        The link provided in the email will auto expire after 24 hours. If the link has expired, you may re-attempt to register again.
+                    </div>
+                    
+                    <br><br>6. How to get the Tax Invoice of my purchase? Can I download my Tax Invoice?<br><br>
+                    <div class="answer">
+                        Not to worry, you may call our 24 hours Customer Care line.
+                    </div>
+                    
+            </div>
+        </p>
+            <button onclick="myFunction()" id="myBtn" style="float: right;">Read more<br></button>
+        </div>
+        <br>
+        <div class="fqa">
+            <p style="text-align:left;color: black;"><strong>Order</strong><span id="dots1"></span>
+                <div id="more1"><br><br>1. How do I buy from HABABA?<br><br>
+                    <div class="answer">
+                        You may place an order via our website (using desktop/pc/tablet/mobile phone). Use the search bar to find the products that you want to buy.
+                    </div>
+                 
+            <br><br>2. How do I know if my Order has been confirmed?<br><br>
+            <div class="answer">
+                You will receive an email notification once your order has been confirmed or you will receive a SMS on your registered mobile number.
+            </div>
+            
+            <br><br>3. Does adding an item to my Cart mean that I've already booked/reserved it?<br><br>
+            <div class="answer">
+                No, adding an item to your Shopping Cart allows you to continue shopping before you proceed to check out and make payment. You can keep the added items in your shopping cart for 7 days, while stock is still available. If the stock has run out, you will not be able to proceed with order check out.
+            </div>
+            
+            <br><br>4. How do I cancel my order?<br><br>
+            <div class="answer">
+                You may cancel your order within 2 hours from order placed by visiting our website. Once you have logged in, go to MY ORDERS and all you have to do is click on the CANCEL button, select a reason and submit your order cancellation request. However, since change of address is not allowed, please ensure to select other reason to cancel order.
+            </div>
+           
+            
+                </div></p>
+            <button onclick="myFunction1()" id="myBtn1" style="float: right;">Read more<br></button>
+        </div>
+        <br>
+        <div class="fqa">
+            <p style="text-align:left;color: black;"><strong>Payment</strong><span id="dots2"></span>
+                <div id="more2"><br><br>1. Can I pay with COD(Cash on Delivery)<br><br>
+                    <div class="answer">
+                        Sorry, We are only providing credit/debit card payment.
+                    </div>
+                    
+            <br><br>2. How do I know if my payment is successful?<br><br>
+            <div class="answer">
+                After ordering, a notification SMS/email will be sent upon successful payment.
+            </div>
+            
+            <br><br>3. My payment was charged but order was unsuccessful. What should I do?<br><br>
+            <div class="answer">
+                First, please check your credit card or bank account statement to verify if there are any charges being imposed for the unsuccessful transaction. If yes, please send a copy of the respective statement that shows your full name, credit card number, transaction date and amount charged to : <a style="color:blue;"href="Contact_Us.html"><small>http://127.0.0.1:5500/Contact_Us.html</small></a>  and we will assist you further.
+            </div>
+            
+                </div></p>
+            <button onclick="myFunction2()" id="myBtn2" style="float: right;">Read more<br></button>
+        </div>
+        <br>
+        <div class="fqa">
+            <p style="text-align:left;color: black;"><strong>Delivery</strong><span id="dots3"></span>
+                <div id="more3"><br><br>1. Can I arrange for delivery overseas?<br><br>
+                    <div class="answer">
+                        We do deliveries with all the country that we collab with.
+                    </div>
+                    
+            <br><br>2. Can I collect my orders from HABABA directly?<br><br>
+            <div class="answer">
+                This option is not available currently. Our delivery partner will deliver your orders to you at your preferred delivery address.
+            </div>
+           
+            <br><br>3. Do you deliver during weekends and holidays?<br><br>
+            <div class="answer">
+                Unfortunately, our courier partners are unable to deliver during weekends or public holidays. Please expect to receive your parcel on working days only.
+            </div>
+            
+            <br><br>4. My order status says ‘Delivered’ but I haven't received my item. What should I do?<br><br>
+            <div class="answer">
+                A. &nbsp;Check if someone else at your address has accepted it.<br>
+                B. &nbsp;Contact the courier. Ask if they have additional information about the package's location. Make sure you have your tracking number or delivery confirmation number in hand.<br>
+                C. &nbsp;Alternatively, you could also contact us at : <a style="color:blue;" href="Contact_Us.html"><small>http://127.0.0.1:5500/Contact_Us.html</small></a>  for further assistance.
+            </div>
+           
+                </div></p>
+            <button onclick="myFunction3()" id="myBtn3" style="float: right;">Read more<br></button>
+        </div>
+        <br>
+        <div class="fqa">
+            <p style="text-align:left;color: black;"><strong>Return and Refund</strong> <span id="dots4"></span>
+                <div id="more4"><br><br>1. How do I request for return?<br><br>
+                    <div class="answer">
+                        Within 10 days from the order receipt date, you may request for return through your online account. Alternatively, you may contact us on :<a style="color: blue;"href="Contact_Us.html" ><small>http://127.0.0.1:5500/Contact_Us.html</small></a>
+                    </div>
+                    
+            <br><br>2. Do I have to pay anything when I return an item?<br><br>
+            <div class="answer">
+                No, there will be no additional charges for any return or refund process within the 10 days policy.
+            </div>
+            
+            <br><br>3. What should I do if I received incomplete item?<br><br>
+            <div class="answer">
+                Do check the parcel received and identify the missing items and/or incomplete parts. Once you have checked, please contact us at : <a style ="color:blue;" href="Contact_Us.html"><small>http://127.0.0.1:5500/Contact_Us.html</small></a> to inform your issue and indicate which items are missing. A report will be created and our person in charge will get in touch with you within 1 to 2 working days.
+                <br><br>
+                Alternatively, subject to product return/exchange eligibility, you may return your product for an exchange or refund within 10 days from delivery via your online account. Once you have logged in, go to MY ORDERS and click on the RETURN button. We will be in touch to arrange for pick-up by our Delivery Partner.
+                <br><br>
+                While waiting to be contacted, please repack the item using its original packaging, complete with full accessories, warranty cards (if any) and do not use or consume the goods received.
+            </div>
+                </div>
+        </p>
+            <button onclick="myFunction4()" id="myBtn4" style="float: right;">Read more<br></button>
+        </div>
+    </div>
+
+    <br><br><br>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    
+    
+   <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
+    <script>
+    function myFunction1() {
+        var dots = document.getElementById("dots1");
+        var moreText = document.getElementById("more1");
+        var btnText = document.getElementById("myBtn1");
+
+        if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+        } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+        }
+    }
+    </script>
+    <script>
+        function myFunction2() {
+            var dots = document.getElementById("dots2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("myBtn2");
+    
+            if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+            } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <script>
+        function myFunction3() {
+            var dots = document.getElementById("dots3");
+            var moreText = document.getElementById("more3");
+            var btnText = document.getElementById("myBtn3");
+    
+            if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+            } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <script>
+        function myFunction4() {
+            var dots = document.getElementById("dots4");
+            var moreText = document.getElementById("more4");
+            var btnText = document.getElementById("myBtn4");
+    
+            if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+            } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+            }
+        }
+    </script>
+     <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    <script src="Cart_general.js"></script>
+</body>
+</html>

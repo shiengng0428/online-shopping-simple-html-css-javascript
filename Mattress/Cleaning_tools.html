@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <style>
+        .col-4:hover {
+            box-shadow: gray 3px 8px 15px 2px;
+        }
+
+        .header1{
+            padding: 20px;
+        }
+
+        .addto-playlists{
+            border: 2px grey groove;
+            background-color: rgb(222, 222, 222);
+            overflow: hidden;
+        }
+
+        .addto-playlists > ul > li{
+            display: inline-block;
+            float: left;
+            padding: 10px 10px 0px 40px;           
+        }
+
+        .fil_list > ul > li{
+            display: block;
+            float: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="125px"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="nav_btn"><a href="">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a>Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a>Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Home Decoration</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a>Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a>Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a>Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">UTensil</a></li>
+                                    <li><a href="Cleaning_tools.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>   
+                    </li>
+                    <li class="nav_btn"><a href="">About</a></li>
+                    <li class="nav_btn"><a href="">Contact</a></li>
+                    <li class="nav_btn"><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30" height="30">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br>A New Style!</h1>
+                    <p>Sucess isn't always about greatness. It's about 
+                        consistency. Consistant<br> hard work gains sucess. Greatness
+                        will come.</p>
+                        <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   
+    <div class="small-container">
+        <div class="header1" align="center">
+            <h1>Cleaning Tools</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="detergent" type="checkbox" value="detergent" name="CleaningType">
+                                <label for="detergent">Detergent</label>
+                            </li>
+                            <li>
+                                <input id="sponge" type="checkbox" value="sponge" name="CleaningType">
+                                <label for="sponge">Cleaning Cloth & Sponge</label>
+                            </li>
+                            <li>
+                                <input id="broom" type="checkbox" value="broom" name="CleaningType">
+                                <label for="broom">Broom</label>
+                            </li>
+                            <li>
+                                <input id="mop" type="checkbox" value="mop" name="CleaningType">
+                                <label for="mop">Mop</label>
+                            </li>
+                            <li>
+                                <input id="glove" type="checkbox" value="glove" name="CleaningType">
+                                <label for="glove">Gloves</label>
+                            </li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Brand</h6>
+                            </li>
+                            <li>
+                                <input id="bounty" type="checkbox" value="bounty" name="CleaningBrand">
+                                <label for="bounty">Bounty</label>
+                            </li>
+                            <li>
+                                <input id="clorox" type="checkbox" value="clorox" name="CleaningBrand">
+                                <label for="clorox">Clorox</label>
+                            </li>
+                            <li>
+                                <input id="scotch" type="checkbox" value="scotch" name="CleaningBrand">
+                                <label for="scotch">Scotch-Brite</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By something</h6>
+                            </li>
+                            <li>
+                                <input id="snacks" type="checkbox" value="snacks" name="Biscuit">
+                                <label for="snacks">something</label>
+                            </li>
+                            <li>
+                                <input id="snacks" type="checkbox" value="snacks" name="Biscuit">
+                                <label for="snacks">something</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        </div>
+
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="col-4 scotch mop cleaningT">
+                    <img src="tools/3m-scotch-brite-easy-sweeper-starter-kit.webp" height="350" width="60" alt="3m-scotch-brite-easy-sweeper-starter-kit">
+                    <a>3m scotch-brite easy sweeper starter-kit</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 bounty cleaningT">
+                    <img src="tools/bounty.webp" height="250" alt="bounty tissue">
+                    <a>Bounty Tissue Roll</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM24.00</p>
+                </li>
+
+                <li class="col-4 detergent cleaningT">
+                    <img src="tools/cleaner-spray.jpg" height="250" alt="simple green cleaning spray">
+                    <a>Simple Green Cleaning Spray</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 clorox detergent cleaningT">
+                    <img src="tools/clorox-bathroom-spray.jpg" height="250" alt="clorox-bathroom-spray.jpg">
+                    <a>Clorox Bathroom Spray</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 clorox detergent cleaningT">
+                    <img src="tools/clorox-detergent.png" height="250" alt="clorox detergent">
+                    <a>Clorox Detergent</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>RM26.00</p>
+                </li>
+
+                <li class="col-4 clorox glove cleaningT">
+                    <img src="tools/clorox-glove.webp" alt="clorox-glove">
+                    <a>Clorox Latex Glove</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM6.00</p>
+                </li>
+
+                <li class="col-4 clorox mop cleaningT">
+                    <img src="tools/clorox-mop.jpg" alt="clorox-mop">
+                    <a>Clorox Mop</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM20.00</p>
+                </li>
+
+                <li class="col-4 clorox mop cleaningT">
+                    <img src="tools/clorox-mop.png" alt="clorox-mop">
+                    <a>Clorox Mop</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM20.00</p>
+                </li>
+
+                <li class="col-4 sponge cleaningT">
+                    <img src="tools/cloth.webp" alt="cloth">
+                    <a>Cedar Cloth Cleaning Kit</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 broom cleaningT">
+                    <img src="tools/handheld-broom.webp" alt="handheld-broom">
+                    <a>Handheld Broom</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 detergent cleaningT">
+                    <img src="tools/harpic-power-plus-toilet-cleaner-250x250.jpg" alt="harpic-power-plus-toilet-cleaner-250x250">
+                    <a>Harpic Power Plus Toilet Cleaner</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM20.00</p>
+                </li>
+
+                <li class="col-4 broom cleaningT">
+                    <img src="tools/homeset-broom.jpeg" alt="homeset-broom">
+                    <a>Homeset Broom</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 broom cleaningT">
+                    <img src="tools/LibmanExtraLargeIndoorOutdoorAngleBroom-5a849960ff1b7800375a998a.jpg" alt="LibmanExtraLargeIndoorOutdoorAngleBroom-5a849960ff1b7800375a998a">
+                    <a>Libman Extra Large Indoor-Outdoor Angle Broom</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 glove cleaningT">
+                    <img src="tools/mr-cleaner-glove.webp" height="350" alt="mr-cleaner-glove">
+                    <a>Mr Cleaner Glove</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 sponge cleaningT">
+                    <img src="tools/multi-cloth.jpg" alt="multi-cloth">
+                    <a>Multi-purpose Cloth</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 scotch sponge cleaningT">
+                    <img src="tools/scotch-brite.jpg" alt="scotch-brite">
+                    <a>Scotch Brite Sponge Pack</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 scotch broom cleaningT">
+                    <img src="tools/scotch-broom.jpg" alt="scotch-broom">
+                    <a>Scotch Brite Broom</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 scotch sponge cleaningT">
+                    <img src="tools/scrotch-rec-sponge.jpg" height="250" alt="scrotch-rec-sponge">
+                    <a>Scotch Brite Sponge Pack</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 scotch glove cleaningT">
+                    <img src="tools/srotch-glove.jpg" alt="srotch-glove">
+                    <a>Scotch Brite Cleaning Glove Pack</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM2.00</p>
+                </li>
+
+                <li class="col-4 detergent cleaningT">
+                    <img src="tools/windex-cleaner.2x.rhorizontal.w600.jpg" height="200" alt="windex-cleaner.2x.rhorizontal.w600">
+                    <a>Windex Cleaner 2x rhorizontal w600</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+            </ul>
+        </div>
+
+        <!----offer---->
+        <div class="offer">
+            <div class="smallcontainer">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/exclusive.png" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p style="color : black;">Exclusive Available on Redstore</p>
+                        <h1 style="color : black;">Smart Band 4</h1>
+                        <small>
+                            The Mi Smart Band 4 features a 39.95 larger
+                            (than Mi Band 3) AMOLED color<br> full-touch display with
+                            adjustable brightness, so everything is clear as can be.<br>
+                        </small>
+                        <a href="" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-------- footer -------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Anroid and ios mobile Phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <img src="images/HABABA.png" alt="">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2020 - Easy Tutorial</p>
+            </div>
+        </div>
+    </div>
+
+         <!--------------js for toggle menu-------------->
+        <script>
+            var MenuItems = document.getElementById("MenuItems")
+
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px"
+                }
+
+                else {
+                    MenuItems.style.maxHeight = "0px"
+                }
+            }
+        </script>
+        
+        <script>
+            // Search Product List
+            function myFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+        <script>
+            // Checkbox Search
+                var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+                var allTools = Array.from(document.querySelectorAll('.cleaningT'));
+                var checked = {};
+
+                getChecked('CleaningType');
+                getChecked('CleaningBrand');
+              //  getChecked('injured');
+              
+
+                Array.prototype.forEach.call(allCheckboxes, function (el) {
+                    el.addEventListener('change', toggleCheckbox);
+                });
+
+                function toggleCheckbox(e) {
+                    getChecked(e.target.name);
+                    setVisibility();
+                }
+
+                function getChecked(name) {
+                    checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                        return el.value;
+                    });
+                }
+
+                function setVisibility() {
+                    allTools.map(function (el) {
+                        var CleaningType = checked.CleaningType.length ? _.intersection(Array.from(el.classList), checked.CleaningType).length : true;
+                        var CleaningBrand = checked.CleaningBrand.length ? _.intersection(Array.from(el.classList), checked.CleaningBrand).length : true;
+
+                        if (CleaningType && CleaningBrand) {
+                            el.style.display = "";
+                        } else {
+                            el.style.display = "none";
+                        }
+                    });
+                }
+        </script>
+</body>
+</html>

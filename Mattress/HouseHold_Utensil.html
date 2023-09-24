@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <style>
+        .col-4:hover {
+            box-shadow: gray 3px 8px 15px 2px;
+        }
+
+        .header1 {
+            padding: 20px;
+        }
+
+        .addto-playlists {
+            border: 2px grey groove;
+            background-color: rgb(222, 222, 222);
+            overflow: hidden;
+        }
+
+            .addto-playlists > ul > li {
+                display: inline-block;
+                float: left;
+                padding: 10px 10px 0px 40px;
+            }
+
+        .fil_list > ul > li {
+            display: block;
+            float: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="125"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="nav_btn"><a href="">Home</a></li>
+                        <li class="dropdown">
+                            <button class="dropbtn"><a href="">Products</a></button>
+                            <ul class="dropdown-content">
+                                <li class="sub-dropdown">
+                                    <a>Fashion</a>
+                                    <ul class="sub-dropdown-content">
+                                        <li><a href="Fashion_Man.html">Man</a></li>
+                                        <li><a href="Fashion_Women.html">Women</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-dropdown">
+                                    <a>Furniture</a>
+                                    <ul class="sub-dropdown-content">
+                                        <li><a href="Furniture.html">Furniture</a></li>
+                                        <li><a href="Furniture_Home.html">Home Decoration</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-dropdown">
+                                    <a>Digital Electronics</a>
+                                    <ul class="sub-dropdown-content">
+                                        <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                        <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-dropdown">
+                                    <a>Food</a>
+                                    <ul class="sub-dropdown-content">
+                                        <li><a href="Food_Snack.html">Snack</a></li>
+                                        <li><a href="Food_Drink.html">Drink</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-dropdown">
+                                    <a>Household Appliance</a>
+                                    <ul class="sub-dropdown-content">
+                                        <li><a href="HouseHold_Utensil.html">UTensil</a></li>
+                                        <li><a href="Cleaning_tools.html">Cleaning Tools</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_btn"><a href="">About</a></li>
+                        <li class="nav_btn"><a href="">Contact</a></li>
+                        <li class="nav_btn"><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30" height="30">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-2">
+                        <h1>Give Your Workout <br>A New Style!</h1>
+                        <p>
+                            Sucess isn't always about greatness. It's about
+                            consistency. Consistant<br> hard work gains sucess. Greatness
+                            will come.
+                        </p>
+                        <a href="" class="btn">Explore Now &#8594;</a>
+                    </div>
+                    <div class="col-2">
+                        <img src="images/image1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="small-container">
+        <div class="header1" align="center">
+            <h1>Utensils</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="spatula" type="checkbox" value="spatula" name="UtensilType">
+                                <label for="spatula">Spatulas & Ladles</label>
+                            </li>
+                            <li>
+                                <input id="fork" type="checkbox" value="fork" name="UtensilType">
+                                <label for="fork">Forks & Spoons</label>
+                            </li>
+                            <li>
+                                <input id="bowl" type="checkbox" value="bowl" name="UtensilType">
+                                <label for="bowl">Bowls</label>
+                            </li>
+                            <li>
+                                <input id="knife" type="checkbox" value="knife" name="UtensilType">
+                                <label for="knife">Knifes</label>
+                            </li>
+                            <li>
+                                <input id="pan" type="checkbox" value="pan" name="UtensilType">
+                                <label for="pan">Pans & Pots</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Uses</h6>
+                            </li>
+                            <li>
+                                <input id="baking" type="checkbox" value="baking" name="UtensilUses">
+                                <label for="baking">Baking</label>
+                            </li>
+                            <li>
+                                <input id="cooking" type="checkbox" value="cooking" name="UtensilUses">
+                                <label for="cooking">Cooking</label>
+                            </li>
+                            <li>
+                                <input id="lunch" type="checkbox" value="lunch" name="UtensilUses">
+                                <label for="lunch">Eating</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By something</h6>
+                            </li>
+                            <li>
+                                <input id="snacks" type="checkbox" value="snacks" name="Biscuit">
+                                <label for="snacks">something</label>
+                            </li>
+                            <li>
+                                <input id="snacks" type="checkbox" value="snacks" name="Biscuit">
+                                <label for="snacks">something</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        </div>
+
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="col-4 baking utensilT">
+                    <img src="utensil/10-Inches-Stainless-Steel-Egg-Beater-Hand-Blender-Spiral-Wire-Whisk-Mixer-For-Baking-Cooking-Tools__40163.1519031598.webp" alt="10-Inches-Stainless-Steel-Egg-Beater-Hand-Blender-Spiral-Wire-Whisk-Mixer-For-Baking-Cooking-Tools">
+                    <a>10-Inches Stainless Steel Hand Blender</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 pan cooking utensilT">
+                    <img src="utensil/annons-pot-with-lid-glass-stainless-steel__0714768_pe730240_s5.webp" alt="annons-pot-with-lid-glass-stainless-steel">
+                    <a>Annons Pot with Lid-glass Stainless Steel</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM32.00</p>
+                </li>
+
+                <li class="col-4 pan cooking utensilT">
+                    <img src="utensil/cooking-pan.jpg" alt="cooking-pan">
+                    <a>Cooking Pan</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM32.00</p>
+                </li>
+
+                <li class="col-4 spatula cooking utensilT">
+                    <img src="utensil/di-oro-seamless-series-silicone-kitchen-soup-ladle-559950_1243x.jpg" alt="di-oro-seamless-series-silicone-kitchen-soup-ladle">
+                    <a>Silicone Kitchen Soup Ladle</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 bowl utensilT">
+                    <img src="utensil/felder-plastic-kitchen-bowl.jpg" alt="felder-plastic-kitchen-bowl">
+                    <a>Felder Plastic Kitchen Bowl</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 spatula cooking utensilT">
+                    <img src="utensil/flexible-spatula.jpg" height="320" alt="flexible-spatula">
+                    <a>Flexible Silicone Spatula</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 pan cooking utensilT">
+                    <img src="utensil/frying-pan.jpg" alt="frying-pan">
+                    <a>Frying Pan</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM22.00</p>
+                </li>
+
+                <li class="col-4 utensilT">
+                    <img src="utensil/Gera+23cm+Tong.jpg" alt="Gera+23cm+Tong">
+                    <a>Gera 23cm Tong</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 baking utensilT">
+                    <img src="utensil/glass-measuring-cups.jpg" alt="glass-measuring-cups">
+                    <a>Glass Measuring Cups</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 utensilT">
+                    <img src="utensil/idealisk-grater-stainless-steel__0713134_pe729282_s5.webp" alt="idealisk-grater-stainless-steel">
+                    <a>Idealisk Grater Stainless Steel</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 knife cooking utensilT">
+                    <img src="utensil/kitchen-knife.jpg" alt="kitchen-knife">
+                    <a>Stainless Steel Kitchen Knife</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM22.00</p>
+                </li>
+
+                <li class="col-4 utensilT">
+                    <img src="utensil/kttongs_silo_1000x960_13.jpg" alt="kttongs_silo">
+                    <a>Tupperware Tongs</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 baking utensilT">
+                    <img src="utensil/smaksam-cake-decoration-set__0712273_pe728720_s5.webp" alt="smaksam-cake-decoration-set">
+                    <a>Smaksam Cake Decoration Set</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM22.00</p>
+                </li>
+
+                <li class="col-4 fork baking utensilT">
+                    <img src="utensil/stainless-measuring-spoon-set.jpg" alt="stainless-measuring-spoon-set">
+                    <a>Stainless Steel Measuring Spoon Set</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 fork cooking lunch utensilT">
+                    <img src="utensil/stainless-spoon.jpg" alt="stainless-spoon">
+                    <a>Stainless Steel Spoon</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 fork lunch cooking utensilT">
+                    <img src="utensil/stainlesssteel-fork.jpg" alt="stainlesssteel-fork">
+                    <a>Stainless Steel Fork</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 knife cooking utensilT">
+                    <img src="utensil/stainless-steel-knife-set-block-17-piece-set-kitchen-knives-set-chef-knif-mart24-2008-24-F2240739_1.jpg"
+                         alt="stainless-steel-knife-set-block-17-piece-set-kitchen-knives-set-chef-knif">
+                    <a>Stainless Steel Knife Set 17-set</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM312.00</p>
+                </li>
+
+                <li class="col-4 spatula cooking utensilT">
+                    <img src="utensil/stainless-steel-spatula.jpg" alt="stainless-steel-spatula">
+                    <a>Stainless Steel Spatula</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 baking utensilT">
+                    <img src="utensil/Stainless-Steel-Wire-Fine-Mesh-Strainer-Oil-Skimmer-Handheld-Flour-Sifter-Sieve-Colander-Kitchen-Baking-Cooking.jpg_q50.jpg"
+                         alt="Stainless-Steel-Wire-Fine-Mesh-Strainer-Oil-Skimmer-Handheld-Flour-Sifter-Sieve-Colander">
+                    <a>Stainless Steel Wire Handheld Flour Sifter</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM12.00</p>
+                </li>
+
+                <li class="col-4 baking utensilT">
+                    <img src="utensil/steel-cup-flour-sifter.jpg" alt="steel-cup-flour-sifter">
+                    <a>Steel Cup Flour Sifter</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM22.00</p>
+                </li>
+
+                <li class="col-4 bowl baking utensilT">
+                    <img src="utensil/steel-mixing-bowl.jpg" alt="steel-mixing-bowl">
+                    <a>Stainless Steel Mixing Bowl</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM32.00</p>
+                </li>
+
+                <li class="col-4 spatula cooking utensilT">
+                    <img src="utensil/wooden-ladle.jpg" alt="wooden-ladle">
+                    <a>Wooden Ladle</a>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>RM22.00</p>
+                </li>
+            </ul>
+        </div>
+
+        <!------offer------>
+        <div class="offer">
+            <div class="smallcontainer">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/exclusive.png" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p style="color : black;">Exclusive Available on Redstore</p>
+                        <h1 style="color : black;">Smart Band 4</h1>
+                        <small>
+                            The Mi Smart Band 4 features a 39.95 larger
+                            (than Mi Band 3) AMOLED color<br> full-touch display with
+                            adjustable brightness, so everything is clear as can be.<br>
+                        </small>
+                        <a href="" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------- footer -------- -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Anroid and ios mobile Phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <img src="images/HABABA.png" alt="">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2020 - Easy Tutorial</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------js for toggle menu-------------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems")
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Checkbox Search
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        var allUtensils = Array.from(document.querySelectorAll('.utensilT'));
+        var checked = {};
+
+        getChecked('UtensilType');
+        getChecked('UtensilUses');
+        //  getChecked('injured');
+
+
+        Array.prototype.forEach.call(allCheckboxes, function (el) {
+            el.addEventListener('change', toggleCheckbox);
+        });
+
+        function toggleCheckbox(e) {
+            getChecked(e.target.name);
+            setVisibility();
+        }
+
+        function getChecked(name) {
+            checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                return el.value;
+            });
+        }
+
+        function setVisibility() {
+            allUtensils.map(function (el) {
+                var UtensilType = checked.UtensilType.length ? _.intersection(Array.from(el.classList), checked.UtensilType).length : true;
+                var UtensilUses = checked.UtensilUses.length ? _.intersection(Array.from(el.classList), checked.UtensilUses).length : true;
+
+                if (UtensilType && UtensilUses) {
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

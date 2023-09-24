@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250" style="float: left; padding: 25px; "></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+   
+    <div class="small-container">
+        <input class="box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        <div class="header1" style="text-align:center">
+            <h1>Cleaning Tools</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="detergent" type="checkbox" value="detergent" name="CleaningType">
+                                <label for="detergent">Detergent</label>
+                            </li>
+                            <li>
+                                <input id="sponge" type="checkbox" value="sponge" name="CleaningType">
+                                <label for="sponge">Cleaning Cloth & Sponge</label>
+                            </li>
+                            <li>
+                                <input id="broom" type="checkbox" value="broom" name="CleaningType">
+                                <label for="broom">Broom</label>
+                            </li>
+                            <li>
+                                <input id="mop" type="checkbox" value="mop" name="CleaningType">
+                                <label for="mop">Mop</label>
+                            </li>
+                            <li>
+                                <input id="glove" type="checkbox" value="glove" name="CleaningType">
+                                <label for="glove">Gloves</label>
+                            </li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Brand</h6>
+                            </li>
+                            <li>
+                                <input id="bounty" type="checkbox" value="bounty" name="CleaningBrand">
+                                <label for="bounty">Bounty</label>
+                            </li>
+                            <li>
+                                <input id="clorox" type="checkbox" value="clorox" name="CleaningBrand">
+                                <label for="clorox">Clorox</label>
+                            </li>
+                            <li>
+                                <input id="scotch" type="checkbox" value="scotch" name="CleaningBrand">
+                                <label for="scotch">Scotch-Brite</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="card col-4 scotch mop cleaningT">
+                    <img class="card-img-top" src="tools/3m-scotch-brite-easy-sweeper-starter-kit.webp" height="350" width="60" alt="3m-scotch-brite-easy-sweeper-starter-kit">
+                    <div class="card-block">
+                        <h4 class="card-title">3m scotch-brite easy sweeper starter-kit</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="3m_scotch-brite_easy_sweeper_starter-kit" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 bounty cleaningT">
+                    <img class="card-img-top" src="tools/bounty.webp" height="250" alt="bounty tissue">
+                    <div class="card-block">
+                        <h4 class="card-title">Bounty Tissue Roll</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM24.00</p>
+                        <a href="#" data-name="Bounty_Tissue_Roll" data-price="24.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 detergent cleaningT">
+                    <img class="card-img-top" src="tools/cleaner-spray.jpg" height="250" alt="simple green cleaning spray">
+                    <div class="card-block">
+                        <h4 class="card-title">Simple Green Cleaning Spray</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Simple_Green_Cleaning_Spray" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 clorox detergent cleaningT">
+                    <img class="card-img-top" src="tools/clorox-bathroom-spray.jpg" height="250" alt="clorox-bathroom-spray.jpg">
+                    <div class="card-block">
+                        <h4 class="card-title">Clorox Bathroom Spray</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Clorox_Bathroom_Spray" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 clorox detergent cleaningT">
+                    <img class="card-img-top" src="tools/clorox-detergent.png" height="250" alt="clorox detergent">
+                    <div class="card-block">
+                        <h4 class="card-title">Clorox Detergent</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM26.00</p>
+                        <a href="#" data-name="Clorox_Detergent" data-price="26.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 clorox glove cleaningT">
+                    <img class="card-img-top" src="tools/clorox-glove.webp" alt="clorox-glove">
+                    <div class="card-block">
+                        <h4 class="card-title">Clorox Latex Glove</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM6.00</p>
+                        <a href="#" data-name="Clorox_Latex_Glove" data-price="6.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 clorox mop cleaningT">
+                    <img class="card-img-top" src="tools/clorox-mop.jpg" alt="clorox-mop">
+                    <div class="card-block">
+                        <h4 class="card-title">Clorox Mop</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM20.00</p>
+                        <a href="#" data-name="Clorox_Mop" data-price="20.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 clorox mop cleaningT">
+                    <img class="card-img-top" src="tools/clorox-mop.png" alt="clorox-mop">
+                    <div class="card-block">
+                        <h4 class="card-title">Clorox Mop</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM20.00</p>
+                        <a href="#" data-name="Clorox_Mop" data-price="20.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 sponge cleaningT">
+                    <img class="card-img-top" src="tools/cloth.webp" alt="cloth">
+                    <div class="card-block">
+                        <h4 class="card-title">Cedar Cloth Cleaning Kit</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Cedar_Cloth_Cleaning_Kit" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 broom cleaningT">
+                    <img class="card-img-top" src="tools/handheld-broom.webp" alt="handheld-broom">
+                    <div class="card-block">
+                        <h4 class="card-title">Handheld Broom</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Handheld_Broom" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 detergent cleaningT">
+                    <img class="card-img-top" src="tools/harpic-power-plus-toilet-cleaner-250x250.jpg" alt="harpic-power-plus-toilet-cleaner-250x250">
+                    <div class="card-block">
+                        <h4 class="card-title">Harpic Power Plus Toilet Cleaner</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM20.00</p>
+                        <a href="#" data-name="Harpic_Power_Plus_Toilet_Cleaner" data-price="20.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 broom cleaningT">
+                    <img class="card-img-top" src="tools/homeset-broom.jpeg" alt="homeset-broom">
+                    <div class="card-block">
+                        <h4 class="card-title">Homeset Broom</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Homeset_Broom" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 broom cleaningT">
+                    <img class="card-img-top" src="tools/LibmanExtraLargeIndoorOutdoorAngleBroom-5a849960ff1b7800375a998a.jpg" alt="LibmanExtraLargeIndoorOutdoorAngleBroom-5a849960ff1b7800375a998a">
+                    <div class="card-block">
+                        <h4 class="card-title">Libman Extra Large Indoor-Outdoor Angle Broom</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Libman_Extra_Large_Indoor-Outdoor_Angle_Broom" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 glove cleaningT">
+                    <img class="card-img-top" src="tools/mr-cleaner-glove.webp" height="350" alt="mr-cleaner-glove">
+                    <div class="card-block">
+                        <h4 class="card-title">Mr Cleaner Glove</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Mr_Cleaner_Glove" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 sponge cleaningT">
+                    <img class="card-img-top" src="tools/multi-cloth.jpg" alt="multi-cloth">
+                    <div class="card-block">
+                        <h4 class="card-title">Multi-purpose Cloth</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Multi-purpose_Cloth" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 scotch sponge cleaningT">
+                    <img class="card-img-top" src="tools/scotch-brite.jpg" alt="scotch-brite">
+                    <div class="card-block">
+                        <h4 class="card-title">Scotch Brite Sponge Pack</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Scotch_Brite_Sponge_Pack" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 scotch broom cleaningT">
+                    <img class="card-img-top" src="tools/scotch-broom.jpg" alt="scotch-broom">
+                    <div class="card-block">
+                        <h4 class="card-title">Scotch Brite Broom</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Scotch_Brite_Broom" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 scotch sponge cleaningT">
+                    <img class="card-img-top" src="tools/scrotch-rec-sponge.jpg" height="250" alt="scrotch-rec-sponge">
+                    <div class="card-block">
+                        <h4 class="card-title">Scotch Brite Sponge Pack</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Scotch_Brite_Sponge_Pack" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 scotch glove cleaningT">
+                    <img class="card-img-top" src="tools/srotch-glove.jpg" alt="srotch-glove">
+                    <div class="card-block">
+                        <h4 class="card-title">Scotch Brite Cleaning Glove Pack</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM2.00</p>
+                        <a href="#" data-name="Scotch_Brite_Cleaning_Glove_Pack" data-price="2.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 detergent cleaningT">
+                    <img class="card-img-top" src="tools/windex-cleaner.2x.rhorizontal.w600.jpg" height="200" alt="windex-cleaner.2x.rhorizontal.w600">
+                    <div class="card-block">
+                        <h4 class="card-title">Windex Cleaner 2x rhorizontal w600</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Windex_Cleaner_2x_rhorizontal_w600" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+        <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+         
+        
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Checkbox Search
+            var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+            var allTools = Array.from(document.querySelectorAll('.cleaningT'));
+            var checked = {};
+
+            getChecked('CleaningType');
+            getChecked('CleaningBrand');
+          //  getChecked('injured');
+          
+
+            Array.prototype.forEach.call(allCheckboxes, function (el) {
+                el.addEventListener('change', toggleCheckbox);
+            });
+
+            function toggleCheckbox(e) {
+                getChecked(e.target.name);
+                setVisibility();
+            }
+
+            function getChecked(name) {
+                checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                    return el.value;
+                });
+            }
+
+            function setVisibility() {
+                allTools.map(function (el) {
+                    var CleaningType = checked.CleaningType.length ? _.intersection(Array.from(el.classList), checked.CleaningType).length : true;
+                    var CleaningBrand = checked.CleaningBrand.length ? _.intersection(Array.from(el.classList), checked.CleaningBrand).length : true;
+
+                    if (CleaningType && CleaningBrand) {
+                        el.style.display = "";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+            }
+    </script>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

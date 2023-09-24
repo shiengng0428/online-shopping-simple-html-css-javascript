@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+                margin-left: -15px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="small-container">
+        <input class="box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        <div class="header1" style="text-align:center">
+            <h1>Mobile and Tablet</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Brand</h6>
+                            </li>
+                            <li>
+                                <input id="Apple" type="checkbox" value="Apple" name="DigitalType">
+                                <label for="Apple">Apple</label>
+                            </li>
+                            <li>
+                                <input id="Samsung" type="checkbox" value="Samsung" name="DigitalType">
+                                <label for="Samsung">Samsung</label>
+                            </li>
+                            <li>
+                                <input id="Huawei" type="checkbox" value="Huawei" name="DigitalType">
+                                <label for="Huawei">Huawei</label>
+                            </li>
+                            <li>
+                                <input id="Xiaomi" type="checkbox" value="Xiaomi" name="DigitalType">
+                                <label for="Xiaomi">Xiaomi</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="Tablet" type="checkbox" value="Tablet" name="DigitalUses">
+                                <label for="Tablet">Tablet</label>
+                            </li>
+                            <li>
+                                <input id="Phone" type="checkbox" value="Phone" name="DigitalUses">
+                                <label for="Phone">Phone</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Price</h6>
+                            </li>
+                            <li>
+                                <input id="pr1" type="checkbox" value="pr1" name="DigitalPrice">
+                                <label for="pr1">Between RM1 - RM1000</label>
+                            </li>
+                            <li>
+                                <input id="pr2" type="checkbox" value="pr2" name="DigitalPrice">
+                                <label for="pr2">Between RM1001 - RM2000</label>
+                            </li>
+                            <li>
+                                <input id="pr3" type="checkbox" value="pr3" name="DigitalPrice">
+                                <label for="pr3">Between RM2001 - RM3000</label>
+                            </li>
+                            <li>
+                                <input id="pr4" type="checkbox" value="pr4" name="DigitalPrice">
+                                <label for="pr4">Between RM3001 - RM4000</label>
+                            </li>
+                            <li>
+                                <input id="pr5" type="checkbox" value="pr5" name="DigitalPrice">
+                                <label for="pr5">Greater Than RM4000</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="card col-4 Apple Phone pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/iphone 12 mini.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPhone 12 mini</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 3,399.00</p>
+                        <a href="#" data-name="iPhone_12_mini" data-price="3399.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Phone pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/iphone 12.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPhone 12</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 3899.00</p>
+                        <a href="#" data-name="iPhone_12" data-price="3899.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/iphone 12 pro.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPhone 12 Pro</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 4899.00</p>
+                        <a href="#" data-name="iPhone_12_Pro" data-price="4899.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/iphone 12 pro max.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPhone 12 Pro Max</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 5299.00</p>
+                        <a href="#" data-name="iPhone_12_Pro_Max" data-price="5299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Phone pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung s 21.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy S 21 5G</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 3499.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_S_21_5G" data-price="3499.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung s 21 plus.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy S 21plus 5G</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4299.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_S_21plus_5G" data-price="4299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung s 21 ultra.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy S 21<br /> Ultra 5G</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 5299.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_S_21" data-price="5299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung note 20 ultra.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Note 20 Ultra</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4349.00</p>
+                        <a href="#" data-name="Samsung_Note_20_Ultra" data-price="4349.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Phone pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei mate 40 pro.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI Mate 40 Pro</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 5215.00</p>
+                        <a href="#" data-name="HUAWEI_Mate_40_Pro" data-price="5215.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Phone pr3 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei p 40 pro.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI P40</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 2790.00</p>
+                        <a href="#" data-name="HUAWEI_P40" data-price="2790.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Phone pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei nova 7.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI nova 7 SE</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 1799.00</p>
+                        <a href="#" data-name="HUAWEI_nova_7_SE" data-price="1799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Phone pr1 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei Y7a.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI Y7a</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 899.00</p>
+                        <a href="#" data-name="HUAWEI_Y7a" data-price="899.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Xiaomi Phone pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/xiaomi 1.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>XIAOMI Redmi Note 9 Pro</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1099.00</p>
+                        <a href="#" data-name="XIAOMI_Redmi_Note_9_Pro" data-price="1099.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Xiaomi Phone pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/xiaomi 2.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>XIAOMI Mi 11 5G DUAL-SIM</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 3999.00</p>
+                        <a href="#" data-name="XIAOMI_Mi_11_5G_DUAL-SIM" data-price="3999.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Xiaomi Phone pr3 DigitalB">
+                    <img class="card-img-top" src="electronic/xiaomi 3.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>XIAOMI Mi 10 5G</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 2399.00</p>
+                        <a href="#" data-name="XIAOMI_Mi_10_5G" data-price="2399.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Xiaomi Phone pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/xiaomi 4.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>XIAOMI Mi Note 10 DUAL-SIM</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1814.00</p>
+                        <a href="#" data-name="XIAOMI_Mi_Note_10_DUAL-SIM" data-price="1814.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Tablet pr3 DigitalB">
+                    <img class="card-img-top" src="electronic/ipad mini.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPad mini (5th Generation)</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 2349.00</p>
+                        <a href="#" data-name="iPad_mini_(5th_Generation)" data-price="2349.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Tablet pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/ipad 2020.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPad (2020)</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1849.00</p>
+                        <a href="#" data-name="iPad_(2020)" data-price="1849.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Tablet pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/ipad air.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPad Air (4th Generation)</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 3249.00</p>
+                        <a href="#" data-name="iPad_Air_(4th_Generation)" data-price="3249.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Apple Tablet pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/ipad pro.png" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>iPad Pro (4th Generation)</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4849.00</p>
+                        <a href="#" data-name="iPad_Pro_(4th_Generation)" data-price="4849.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Tablet pr1 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung tab 3.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy Tab A7</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 599.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_Tab_A7" data-price="599.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Tablet pr1 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung tablet 1.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy Tab A7</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 999.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_Tab_A7" data-price="999.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Tablet pr1 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung tablet 2.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy Tab S6 Lite</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 169.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_Tab_S6_Lite" data-price="169.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Samsung Tablet pr5 DigitalB">
+                    <img class="card-img-top" src="electronic/samsung tablet 4.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>Samsung Galaxy Tab S7</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4599.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_Tab_S7" data-price="4599.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Tablet pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/tab 11.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI Mediapad M5 PRO</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1299.00</p>
+                        <a href="#" data-name="HUAWEI_Mediapad_M5_PRO" data-price="1299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Tablet pr2 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei tab 1.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI Matepad 10.4<br /> BAH3-W09</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1899.99</p>
+                        <a href="#" data-name="HUAWEI_Matepad_10.4" data-price="1899.99" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 Huawei Tablet pr4 DigitalB">
+                    <img class="card-img-top" src="electronic/huawei tab 2.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title"><strong>HUAWEI MATEPAD PRO 10.8" 5G</strong></h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 3154.99</p>
+                        <a href="#" data-name="HUAWEI_MATEPAD_PRO_10.8'_5G" data-price="3154.99" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Checkbox Search
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        var allDigital = Array.from(document.querySelectorAll('.DigitalB'));
+        var checked = {};
+
+        getChecked('DigitalType');
+        getChecked('DigitalUses');
+        getChecked('DigitalPrice');
+        //  getChecked('injured');
+
+
+        Array.prototype.forEach.call(allCheckboxes, function (el) {
+            el.addEventListener('change', toggleCheckbox);
+        });
+
+        function toggleCheckbox(e) {
+            getChecked(e.target.name);
+            setVisibility();
+        }
+
+        function getChecked(name) {
+            checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                return el.value;
+            });
+        }
+
+        function setVisibility() {
+            allDigital.map(function (el) {
+                var DigitalType = checked.DigitalType.length ? _.intersection(Array.from(el.classList), checked.DigitalType).length : true;
+                var DigitalUses = checked.DigitalUses.length ? _.intersection(Array.from(el.classList), checked.DigitalUses).length : true;
+                var DigitalPrice = checked.DigitalPrice.length ? _.intersection(Array.from(el.classList), checked.DigitalPrice).length : true;
+                if (DigitalType && DigitalUses && DigitalPrice) {
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

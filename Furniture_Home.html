@@ -1,0 +1,683 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+                margin-left: -15px;            
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="small-container">
+        <input class="box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        <div class="header1" style="text-align:center">
+            <h1>Mattress</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Price</h6>
+                            </li>
+                            <li>
+                                <input id="pr1" type="checkbox" value="pr1" name="FurniturePrice">
+                                <label for="pr1">Between RM1 - RM1000</label>
+                            </li>
+                            <li>
+                                <input id="pr2" type="checkbox" value="pr2" name="FurniturePrice">
+                                <label for="pr2">Between RM1001 - RM2000</label>
+                            </li>
+                            <li>
+                                <input id="pr3" type="checkbox" value="pr3" name="FurniturePrice">
+                                <label for="pr3">Between RM2001 - RM3000</label>
+                            </li>
+                            <li>
+                                <input id="pr4" type="checkbox" value="pr4" name="FurniturePrice">
+                                <label for="pr4">Greater Than RM3000</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="card col-4 pr3 FurnitureB">
+                    <img class="card-img-top" src="Mattress/1.png" alt="(1+6) IonCare Pro">
+                    <div class="card-block">
+                        <h4 class="card-title">IonCare Pro</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 2,799.00</p>
+                        <a href="#" data-name="IonCare_Pro" data-price="2799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/2.png" alt="Signature 33">
+                    <div class="card-block">
+                        <h4 class="card-title">Signature 33</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 1,249.00</strike>  RM 999.00</p>
+                        <a href="#" data-name="Signature_33" data-price="999.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/3.png" alt="Signature 66">
+                    <div class="card-block">
+                        <h4 class="card-title">Signature 66</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 1,699.00</strike>  RM 1,299.00</p>
+                        <a href="#" data-name="Signature_66" data-price="1299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr3 FurnitureB">
+                    <img class="card-img-top" src="Mattress/4.png" alt="Signature 99">
+                    <div class="card-block">
+                        <h4 class="card-title">Signature 99</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 2,249.00</strike>  RM 1,799.00</p>
+                        <a href="#" data-name="Signature_99" data-price="1799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/5.png" alt="Love Story 2.0">
+                    <div class="card-block">
+                        <h4 class="card-title">Love Story 2.0</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 3,699.00</strike>  RM 2,299.00</p>
+                        <a href="#" data-name="Love_Story_2.0" data-price="2299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/6.png" alt="Love Paradise 2.0" >
+                    <div class="card-block">
+                        <h4 class="card-title">Love Paradise 2.0</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 4,499.00</strike>  RM 3,899.00</p>
+                        <a href="#" data-name="Love_Paradise_2.0" data-price="3899.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/7.png" alt="Louisville Mattress + EC107 Bedframe" >
+                    <div class="card-block">
+                        <h4 class="card-title">Louisville Mattress + EC107 Bedframe</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,199.00</p>
+                        <a href="#" data-name="Louisville_Mattress_+_EC107_Bedframe" data-price="1199.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/8.png" alt="Charlotte Mattress + EC104 Bedframe" >
+                    <div class="card-block">
+                        <h4 class="card-title">Charlotte Mattress + EC104 Bedframe</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 1,849.00</strike>RM 1,399.00</p>
+                        <a href="#" data-name="Charlotte_Mattress_+_EC104_Bedframe" data-price="1399.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/9.png" alt="Mosfree Premium + EC101 Bedframe" >
+                    <div class="card-block">
+                        <h4 class="card-title">Mosfree Premium + EC101 Bedframe</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 1,599.00</strike>RM 1,399.00</p>
+                        <a href="#" data-name="Mosfree_Premium_+_EC101_Bedframe" data-price="1399.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr3 FurnitureB">
+                    <img class="card-img-top" src="Mattress/10.png" alt="Vienna Mattress + FC106 Bedframe" >
+                    <div class="card-block">
+                        <h4 class="card-title">Vienna Mattress + FC106 Bedframe</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 2,599.00</strike>RM 1,899.00</p>
+                        <a href="#" data-name="Vienna_Mattress_+_FC106_Bedframe" data-price="1899.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr1 FurnitureB">
+                    <img class="card-img-top" src="Mattress/11.png" alt="M Freedom (Super Single)" >
+                    <div class="card-block">
+                        <h4 class="card-title">M Freedom (Super Single)</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 699.00</p>
+                        <a href="#" data-name="M_Freedom_(Super_Single)" data-price="699.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr3 FurnitureB">
+                    <img class="card-img-top" src="Mattress/12.png" alt="True Balance" >
+                    <div class="card-block">
+                        <h4 class="card-title">True Balance</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 2,599.00</strike>RM 1,999.00</p>
+                        <a href="#" data-name="True_Balance" data-price="1999.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/13.png" alt="Perfect Balance" >
+                    <div class="card-block">
+                        <h4 class="card-title">(1+6) Perfect Balance</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text"><strike style="color:grey;">RM 3,599.00</strike>RM 3,299.00</p>
+                        <a href="#" data-name="(1+6)_Perfect_Balance" data-price="3299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr1 FurnitureB">
+                    <img class="card-img-top" src="Mattress/14.png" alt="Good Junior Toddler Mattress" >
+                    <div class="card-block">
+                        <h4 class="card-title">Good Junior Toddler Mattress</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 499,00</p>
+                        <a href="#" data-name="Good_Junior_Toddler_Mattress" data-price="499.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr3 FurnitureB">
+                    <img class="card-img-top" src="Mattress/15.jpg" alt="Empire Classic" >
+                    <div class="card-block">
+                        <h4 class="card-title">Empire Classic</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 2,799.00</p>
+                        <a href="#" data-name="Empire_Classic" data-price="2799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/16.jpg" alt="Empire Luxury" >
+                    <div class="card-block">
+                        <h4 class="card-title">Empire Luxury</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4,199.00</p>
+                        <a href="#" data-name="Empire_Luxury" data-price="4199.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/17.jpg" alt="Empire Premium">
+                    <div class="card-block">
+                        <h4 class="card-title">Empire Premium</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 3,399.00</p>
+                        <a href="#" data-name="Empire_Premium" data-price="3399.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr4 FurnitureB">
+                    <img class="card-img-top" src="Mattress/18.png" alt="Bianca Anna" >
+                    <div class="card-block">
+                        <h4 class="card-title">Bianca Anna</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="card-text">RM 35,888.00</p>
+                        <a href="#" data-name="Bianca_Anna" data-price="35888.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/19.png" alt="Aquamarine">
+                    <div class="card-block">
+                        <h4 class="card-title">Aquamarine</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,999.00</p>
+                        <a href="#" data-name="Aquamarine" data-price="1999.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/20.jpg" alt="Love Sparkles">
+                    <div class="card-block">
+                        <h4 class="card-title">(1+6) Love Sparkles</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,799.00</p>
+                        <a href="#" data-name="(1+6)_Love_Sparkles" data-price="1799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            
+                <li class="card col-4 pr1 FurnitureB">
+                    <img class="card-img-top" src="Mattress/21.jpg" alt="Reborn Comfort" >
+                    <div class="card-block">
+                        <h4 class="card-title">Reborn Comfort</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 729.00</p>
+                        <a href="#" data-name="Reborn_Comfort" data-price="729.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/22.jpg" alt="Efisio">
+                    <div class="card-block">
+                        <h4 class="card-title">(1+8) Efisio</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,799.00</p>
+                        <a href="#" data-name="(1+8)_Efisio" data-price="1799.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/23.jpg" alt="Charlotte">
+                    <div class="card-block">
+                        <h4 class="card-title">Charlotte</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,249.00</p>
+                        <a href="#" data-name="Charlotte" data-price="1249.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pr2 FurnitureB">
+                    <img class="card-img-top" src="Mattress/24.jpg" alt="Fresno">
+                    <div class="card-block">
+                        <h4 class="card-title">Fresno</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1,560.00</p>
+                        <a href="#" data-name="Fresno" data-price="1560.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Checkbox Search
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        var allUtensils = Array.from(document.querySelectorAll('.FurnitureB'));
+        var checked = {};
+
+        getChecked('FurniturePrice');
+        //  getChecked('injured');
+
+
+        Array.prototype.forEach.call(allCheckboxes, function (el) {
+            el.addEventListener('change', toggleCheckbox);
+        });
+
+        function toggleCheckbox(e) {
+            getChecked(e.target.name);
+            setVisibility();
+        }
+
+        function getChecked(name) {
+            checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                return el.value;
+            });
+        }
+
+        function setVisibility() {
+            allUtensils.map(function (el) {
+                var FurniturePrice = checked.FurniturePrice.length ? _.intersection(Array.from(el.classList), checked.FurniturePrice).length : true;
+
+                if (FurniturePrice) {
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

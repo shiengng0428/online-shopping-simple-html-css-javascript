@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 280px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div class="small-container">
+        <input class="box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        <div class="header1" style="text-align:center">
+            <h1>Fashion</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="wind" type="checkbox" value="wind" name="FashionType">
+                                <label for="wind">Windbreaker</label>
+                            </li>
+                            <li>
+                                <input id="coat" type="checkbox" value="coat" name="FashionType">
+                                <label for="coat">Coat</label>
+                            </li>
+                            <li>
+                                <input id="tshirt" type="checkbox" value="tshirt" name="FashionType">
+                                <label for="tshirt">Tshirt</label>
+                            </li>
+                            <li>
+                                <input id="jacket" type="checkbox" value="jacket" name="FashionType">
+                                <label for="jacket">Jacket</label>
+                            </li>
+            
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Colour</h6>
+                            </li>
+                            <li>
+                                <input id="black" type="checkbox" value="black" name="FashionColor">
+                                <label for="black">Black</label>
+                            </li>
+                            <li>
+                                <input id="silver" type="checkbox" value="silver" name="FashionColor">
+                                <label for="silver">Silver</label>
+                            </li>
+                            <li>
+                                <input id="white" type="checkbox" value="white" name="FashionColor">
+                                <label for="white">White</label>
+                            </li>
+                            <li>
+                                <input id="blue" type="checkbox" value="blue" name="FashionColor">
+                                <label for="blue">Blue</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Price</h6>
+                            </li>
+                            <li>
+                                <input id="pr1" type="checkbox" value="pr1" name="FashionPrice">
+                                <label for="pr1">Between RM1 - RM50</label>
+                            </li>
+                            <li>
+                                <input id="pr2" type="checkbox" value="pr2" name="FashionPrice">
+                                <label for="pr2">Between RM51 - RM100</label>
+                            </li>
+                            <li>
+                                <input id="pr3" type="checkbox" value="pr3" name="FashionPrice">
+                                <label for="pr3">Between RM101 - RM200</label>
+                            </li>
+                            <li>
+                                <input id="pr4" type="checkbox" value="pr4" name="FashionPrice">
+                                <label for="pr4">Greater Than RM200</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <br>
+       
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="card col-4 wind black pr2 fashionM" >
+                    <img class="card-img-top" src="Fashion/Windbreaker(1).jpg"  alt=" Windbreaker Black">
+                    <div class="card-block">
+                        <h4 class="card-title">Windbreaker Black</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p class="card-text">RM 129.95</p>
+                        <a href="#" data-name="Windbreaker_Black" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 wind silver pr2 fashionM" >
+                    <img class="card-img-top" src="Fashion/Windbreaker(2).jpg" alt="">
+                    <div class="card-block">
+                    <h4 class="card-title">Windbreaker Silver Light</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p class="card-text">RM 129.95</p>
+                        <a href="#" data-name="Windbreaker_Silver_Light" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 coat pr3 fashionM" >
+                    <img class="card-img-top" src="Fashion/CarCoat.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Car Coat</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p class="card-text">RM 199.95</p>
+                        <a href="#" data-name="Car_Coat" data-price="199.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 coat pr4 fashionM" >
+                    <img class="card-img-top" src="Fashion/CarCoat2.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Car Coat</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p class="card-text">RM 249.95</p>
+                        <a href="#" data-name="Car_Coat" data-price="249.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 wind black pr3 fashionM" >
+                    <img class="card-img-top" src="Fashion/PrintedWindbreakers(2).jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Printed Windbreaker</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p class="card-text">RM157.95</p>
+                        <a href="#" data-name="Printed_Windbreaker" data-price="157.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 jacket black pr1 fashionM">
+                    <img class="card-img-top" src="Fashion/RegularFitShirtJacket(1).jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Regular Fit Shirt Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 49.99</p>
+                        <a href="#" data-name="Regular_Fit_Shirt_Jacket" data-price="49.99" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 black jacket pr4 fashionM">
+                    <img class="card-img-top" src="Fashion/Praka.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Praka</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM249.95</p>
+                        <a href="#" data-name="Praka" data-price="249.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 wind white pr2 fashionM">
+                    <img class="card-img-top" src="Fashion/PrintedWindbreaker.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Special Printed Windbreaker</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="card-text">RM97.95</p>
+                        <a href="#" data-name="Special_Printed_Windbreaker" data-price="97.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            
+                <li class="card col-4 jacket pr3 fashionM">
+                    <img class="card-img-top" src="Fashion/TwillShirtJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Twill Shirt Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM129.95</p>
+                        <a href="#" data-name="Twill_Shirt_Jacket" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 jacket pr1 fashionM">
+                    <img class="card-img-top" src="Fashion/PrintedDenimJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Printed Denim Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM39.95</p>
+                        <a href="#" data-name="Printed_Denim_Jacket" data-price="39.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 jacket pr3 black fashionM">
+                    <img class="card-img-top" src="Fashion/RegularFitShirtJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Reguar Fit Shirt Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM129.95</p>
+                        <a href="#" data-name="Reguar_Fit_Shirt_Jacket" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 jacket blue pr3 fashionM">
+                    <img class="card-img-top" src="Fashion/DenimJacket(2).jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Denum Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM129.95</p>
+                        <a href="#" data-name="Denum_Jacket" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 pr3 jacket fashionM">
+                    <img class="card-img-top" src="Fashion/RegularFitJacket(2).jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Regular Fit Shirt Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM129.95</p>
+                        <a href="#" data-name="Regular_Fit_Shirt_Jacket" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 blue jacket pr3 fashionM">
+                    <img class="card-img-top" src="Fashion/BomberJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Bomber Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM129.95</p>
+                        <a href="#" data-name="Bomber_Jacket" data-price="129.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 pr2 black jacket fashionM">
+                    <img class="card-img-top" src="Fashion/BlackJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Black Plain Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM74.95</p>
+                        <a href="#" data-name="Black Plain_Jacket" data-price="74.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+        
+                <li class="card col-4 white pr3 jacket fashionM">
+                    <img class="card-img-top" src="Fashion/CorduroyShirtJacket.jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Corduroy Shirt Jacket</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM148.12</p>
+                        <a href="#" data-name="Corduroy_Shirt_Jacket" data-price="148.12" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+    // Checkbox Search
+    var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+    var allFashion = Array.from(document.querySelectorAll('.fashionM'));
+    var checked = {};
+
+    getChecked('FashionType');
+    getChecked('FashionColor');
+    getChecked('FashionPrice');
+    //  getChecked('injured');
+
+
+    Array.prototype.forEach.call(allCheckboxes, function (el) {
+        el.addEventListener('change', toggleCheckbox);
+    });
+
+    function toggleCheckbox(e) {
+        getChecked(e.target.name);
+        setVisibility();
+    }
+
+    function getChecked(name) {
+        checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+            return el.value;
+        });
+    }
+
+    function setVisibility() {
+        allFashion.map(function (el) {
+            var FashionType = checked.FashionType.length ? _.intersection(Array.from(el.classList), checked.FashionType).length : true;
+            var FashionColor = checked.FashionColor.length ? _.intersection(Array.from(el.classList), checked.FashionColor).length : true;
+            var FashionPrice = checked.FashionPrice.length ? _.intersection(Array.from(el.classList), checked.FashionPrice).length : true;
+            if (FashionType && FashionColor && FashionPrice) {
+                el.style.display = "";
+            } else {
+                el.style.display = "none";
+            }
+        });
+    }
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
+    <script src="Cart_general.js"></script>
+</body>
+</html>

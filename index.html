@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class = "row" >
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/img3.jpeg" style="width:100%" height="500px">
+            </div>
+                    
+            <div class="mySlides fade">
+                <img src="images/img2.jpg" style="width:100%" height="500px">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/movie.gif" alt="video/mp4" width="1000" height="500px">  
+            </div>          
+
+            <div class="mySlides fade">
+                <img src="images/img1.jpg" style="width:100%" height="500px">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <a href="Fashion_Man.html"><img src="images/Fashion.jpg"></a>
+                    <h2>Fashion</h2>
+                </div>
+                <div class="col-5">
+                    <a href="Furniture.html"><img src="images/Furniture.jpg"></a>
+                    <h2>Furniture</h2>
+                </div>
+                <div class="col-5">
+                    <a href="Digital_Computer.html"><img src="images/Digital.jpg"></a>
+                    <h2>Digital Electronics</h2>
+                </div>
+                <div class="col-5">
+                    <a href="Food_Drink.html"><img src="images/Food.jpg"></a>
+                    <h2>Food & Snack</h2>
+                </div>
+                <div class="col-5">
+                    <a href="HouseHold_Cleaning.html"><img src="images/Kitchen.jpg"></a>
+                    <h2>Household Appliance</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <p class= "box1" id="time" style="color : black;"></p>
+                    <img src="images/ipaddd.png" class="offer-img">
+                </div>
+                <br>
+                <div class="col-2">
+                    <p style="color : black;">Exclusive Available on HABABA Store</p>
+                    <h1 style="color : black;">iPad Air (4th Generation) Rose Gold</h1>
+                    <small>
+                        All-screen design with a 10.9-inch Liquid Retina display featuring True Tone and P3 wide color.<br> A14 Bionic chip featuring amazingly fast CPU and graphics performance.<br>
+                        Touch ID integrated into the top button.<br />12MP back camera with Focus Pixels and 7MP FaceTime HD camera with improved low-light performance.<br />
+                    </small>
+                    <a href="Digital_Mobile.html"><div class="btn">Buy Now &#8594;</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-------- testimonial -------->
+    <div class="testimonial">
+        <div class="small-container">
+                <div class="row">
+                    <img src=" images/HABABA.png" alt="MainLogo" usemap="#MainLogoimagemap" width="600" height="250" style="margin-left: auto;margin-right: auto;" >
+
+                    <map name="MainLogoimagemap" id="MainLogoimagemap">
+                    <area shape="rect" coords="10,30,590,220" href="About_Us.html"/>
+                    </map>
+ 
+                </div>
+        </div>
+    </div>
+
+    <!----- featured products ----->
+    <div class="small-container">
+        <div class="big-container">
+            <div class="row">
+                <h2 class="title"><strong>Big Deal</strong> </h2>
+                <div class="more">More</div>
+            </div>
+            <div class="row">
+                <div class="card col-4">
+                    <img class="card-img-top" src="utensil/annons-pot-with-lid-glass-stainless-steel__0714768_pe730240_s5.webp" alt="annons-pot-with-lid-glass-stainless-steel__0714768_pe730240_s5.webp">
+                    <div class="card-block">
+                        <h4 class="card-title">Annons Pot with Lid-glass Stainless Steel</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 32.00</p>
+                        <a href="#" data-name="Annons_Pot_with_Lid-glass_Stainless_Steel" data-price="32.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="Fashion/hmgoepprod (1).jpg" alt="Cotton Dress">
+                    <div class="card-block">
+                        <h4 class="card-title">Cotton Dress</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 99.95</p>
+                        <a href="#" data-name="Cotton_Dress" data-price="99.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="Fashion/hmgoepprod (18).jpg" alt="Patterned Trousers">
+                    <div class="card-block">
+                        <h4 class="card-title">Patterned Trousers</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 99.95</p>
+                        <a href="#" data-name="Patterned_Trousers" data-price="99.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="images/tab 11.jpg" alt="HUAWEI Mediapad M5 PRO">
+                    <div class="card-block">
+                        <h4 class="card-title">HUAWEI Mediapad M5 PRO</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 1299.00</p>
+                        <a href="#" data-name="HUAWEI_Mediapad_M5_PRO" data-price="1299.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="card col-4">
+                <img class="card-img-top" src="Fashion/PrintedWindbreaker.jpg" alt="">
+                <div class="card-block">
+                    <h4 class="card-title">Special Printed Windbreaker</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="card-text">RM97.95</p>
+                    <a href="#" data-name="Special_Printed_Windbreaker" data-price="97.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <img class="card-img-top" src="Fashion/PrintedDenimJacket.jpg" alt="">
+                <div class="card-block">
+                    <h4 class="card-title">Printed Denim Jacket</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="card-text">RM39.95</p>
+                    <a href="#" data-name="Printed_Denim_Jacket" data-price="39.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <img class="card-img-top" src="Fashion/hmgoepprod (12).jpg" alt="">
+                <div class="card-block">
+                    <h4 class="card-title">Pleated Chiffan Dress</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="card-text">RM 149.95</p>
+                    <a href="#" data-name="Pleated_Chiffan_Dress" data-price="149.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <img class="card-img-top" src="Mattress/11.png" alt="M Freedom (Super Single)" >
+                <div class="card-block">
+                    <h4 class="card-title">M Freedom (Super Single)</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="card-text">RM 699.00</p>
+                    <a href="#" data-name="M_Freedom_(Super Single)" data-price="699.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card col-4">
+                    <img class="card-img-top" src="Fashion/hmgoepprod (15).jpg" alt="">
+                    <div class="card-block">
+                        <h4 class="card-title">Oversized Cotton Shirt</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 54.95</p>
+                        <a href="#" data-name="Oversized_Cotton_Shirt" data-price="54.95" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="Mattress/16.jpg" alt="Empire Luxury" >
+                    <div class="card-block">
+                        <h4 class="card-title">Empire Luxury</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 4,199.00</p>
+                        <a href="#" data-name="Empire_Luxury" data-price="4199.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="electronic/ipad air.png" alt="iPad Air (4th Generation)">
+                    <div class="card-block">
+                        <h4 class="card-title">iPad Air (4th Generation)</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">RM 3249.00</p>
+                        <a href="#" data-name="iPad_Air_(4th_Generation)" data-price="3249.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <img class="card-img-top" src="electronic/samsung tab 3.jpg" alt="Samsung Galaxy Tab A7">
+                    <div class="card-block">
+                        <h4 class="card-title">Samsung Galaxy Tab A7</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM 599.00</p>
+                        <a href="#" data-name="Samsung_Galaxy_Tab_A7" data-price="599.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------offer------>
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/msi pink.bmp" class="offer-img" >
+                </div>
+                <br>
+                <div class="col-2">
+                    <p style="color : black;">Exclusive Available on Hababa Store</p>
+                    <h1 style="color : black;">MSI PRESTIGE 14 PINK EDITION</h1>
+                    <small>
+                        MSI taps into the spirit of exploration by designing the greatest laptop collection- Prestige Series.<br />
+                        To keep more efficient of the work, these finely-crafted machines not only show unique taste,<br />
+                        but also are immensely powerful. Thin and light yet immensely powerful, <br />it enhances your style and workflow wherever you go.<br>
+                        "Pink" is the style, also an attitude of the way you act.<br /> Pursuing the elite style through unique taste and innovative spirit,<br />
+                        the Prestige 14 Rose Pink brings sophistication to live. <br />
+                    </small>
+                    <a href="Digital_Computer.html"><div class="btn">Buy Now &#8594;</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm" >
+    <form class="form-container1" >
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea id="text_message" placeholder="Type message.." name="msg" required ></textarea>
+
+        <button onclick="myFunction10()" type="submit" class="btn"  >Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        var slides, dots;
+
+        function plusSlides(position) {
+            slideIndex += position;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            else if (slideIndex < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function currentSlide(index) {
+            if (index > slides.length) { index = 1 }
+            else if (index < 1) { index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[index - 1].style.display = "block";
+            dots[index - 1].className += " active";
+        }
+
+        function showSlides() {
+            var i;
+            slides = document.getElementsByClassName("mySlides");
+            dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+    </script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("June 5, 2021 15:37:25").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("time").innerHTML = days + "D :" + hours + "H :"
+          + minutes + "M :" + seconds + "S ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("time").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    </script>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

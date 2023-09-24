@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250px" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <div class="aboutmargin">
+        <p><h1 style="text-align: center;">Terms of Service</h1><br></p>
+        <p><strong>1.INTRODUCTION</strong><br><br><br>
+        1.1      Welcome to the Hababa platform (the "Site"). Please read the following Terms of Service carefully before using this Site or opening a Hababa account ("Account") so that you are aware of your legal rights and  obligations with respect to Hababa Mobile Malaysia Sdn. Bhd (Company Registration No.201501009497 [1134832-W]and its affiliates and subsidiaries (individually and collectively, "Hababa", "we", "us" or "our").        The "Services" we provide or make available include (a) the Site, (b) the services provided by the Site and by Hababa client software made available through the Site, and (c) all information, linked pages, features, data, text, images, photographs, graphics, music, sounds, video (including live streams), messages, tags, content, programming, software, application services (including, without limitation, any mobile application services) or other materials made available through the Site or its related services ("Content"). Any new features added to or augmenting the Services are also subject to these Terms of Service. These Terms of Service govern your use of Services provided by Hababa.<br><br>
+        1.2      The Services include an online platform service that provides a place and opportunity for the sale of goods between the buyer (“Buyer”) and the seller (“Seller”) (collectively “you”, “Users” or “Parties”). The actual contract for sale is directly between Buyer and Seller and Hababa is not a party to that or any other contract between Buyer and Seller and accepts no obligations in connection with any such contract. Parties to such transaction will be entirely responsible for the sales contract between them, the listing of goods, warranty of purchase and the like. Hababa is not involved in the transaction between Users. Hababa may or may not pre-screen Users or the Content or information provided by Users. Hababa reserves the right to remove any Content or information posted by you on the Site in accordance to Section 6.4 herein. Hababa cannot ensure that Users will actually complete a transaction.<br><br>
+        1.3      Before becoming a User of the Site, you must read and accept all of the terms and conditions in, and linked to, these Terms of Service and you must consent to the processing of your personal data as described in the Privacy Policy linked hereto.<br><br>
+        1.4     Hababa reserves the right to change, modify, suspend or discontinue all or any part of this Site or the Services at any time or upon notice as required by local laws. Hababa may release certain Services or their features in a beta version, which may not work correctly or in the same way the final version may work, and we shall not be held liable in such instances. Hababa may also impose limits on certain features or restrict your access to parts of, or the entire, Site or Services in its sole discretion and without notice or liability.<br><br>
+        1.5       Hababa reserves the right to refuse to provide you access to the Site or Services or to allow you to open an Account for any reason.<br><br>
+        BY USING Hababa SERVICES OR OPENING AN ACCOUNT, YOU GIVE YOUR IRREVOCABLE ACCEPTANCE OF AND CONSENT TO THE TERMS OF THIS AGREEMENT, INCLUDING THOSE ADDITIONAL TERMS AND CONDITIONS AND POLICIES REFERENCED HEREIN AND/OR LINKED HERETO.<br><br>
+        IF YOU DO NOT AGREE TO THESE TERMS, PLEASE DO NOT USE OUR SERVICES OR ACCESS THE SITE. IF YOU ARE UNDER THE AGE OF 18 OR THE LEGAL AGE FOR GIVING CONSENT HEREUNDER PURSUANT TO THE APPLICABLE LAWS IN YOUR COUNTRY (THE “LEGAL AGE”), YOU MUST GET PERMISSION FROM A PARENT OR LEGAL GUARDIAN TO OPEN AN ACCOUNT AND THAT PARENT OR LEGAL GUARDIAN MUST AGREE TO THE TERMS OF THIS AGREEMENT. IF YOU DO NOT KNOW WHETHER YOU HAVE REACHED THE LEGAL AGE, OR DO NOT UNDERSTAND THIS SECTION, PLEASE DO NOT CREATE AN ACCOUNT UNTIL YOU HAVE ASKED YOUR PARENT OR LEGAL GUARDIAN FOR HELP. IF YOU ARE THE PARENT OR LEGAL GUARDIAN OF A MINOR WHO IS CREATING AN ACCOUNT, YOU MUST ACCEPT THE TERMS OF THIS AGREEMENT ON THE MINOR'S BEHALF AND YOU WILL BE RESPONSIBLE FOR ALL USE OF THE ACCOUNT OR COMPANY SERVICES USING SUCH ACCOUNT, WHETHER SUCH ACCOUNT IS CURRENTLY OPEN OR CREATED LATER.<br><br><br>
+        </p>
+        
+        <p><strong>2.PRIVACY</strong><br><br>
+        2.1      Your privacy is very important to us at Hababa. To better protect your rights we have provided the Hababa.com Privacy Policy to explain our privacy practices in detail. Please review the Privacy Policy to understand how Hababa collects and uses the information associated with your<br><br>
+        2.2       Account and/or your use of the Services (the “User Information”). By using the Services or providing information on the Site, you:<br><br>
+        (i)        consent to Hababa's collection, use, disclosure and/or processing of your Content, personal data and User Information as described in the Privacy Policy;<br><br>
+        (ii)       agree and acknowledge that the proprietary rights of your User Information are jointly owned by you and Hababa; and<br><br>
+        (iii)       shall not, whether directly or indirectly, disclose your User Information to any third party, or otherwise allow any third party to access or use your User Information, without Hababa’s prior written consent.<br><br>
+        2.3       Users in possession of another User’s personal data through the use of the Services (the “Receiving Party”) hereby agree that, they will (i) comply with all applicable personal data protection laws with respect to any such data; (ii) allow the User whose personal data the Receiving Party has collected (the “Disclosing Party”) to remove his or her data so collected from the Receiving Party’s database; and (iii) allow the Disclosing Party to review what information have been collected about them by the Receiving Party, in each case of (ii) and (iii) above, in compliance with and where required by applicable laws.<br><br><br>
+        </p>
+        <p><strong>3.LIMITED LICENSE</strong><br><br>
+        3.1       Hababa grants you a limited and revocable license to access and use the Services subject to the terms and conditions of these Terms of Service. All proprietary Content, trademarks, service marks, brand names, logos and other intellectual property (“Intellectual Property”) displayed in the Site are the property of Hababa and where applicable, third party proprietors identified in the Site. No right or licence is granted directly or indirectly to any party accessing the Site to use or reproduce any Intellectual Property, and no party accessing the Site shall claim any right, title or interest therein. By using or accessing the Services you agree to comply with the copyright, trademark, service mark, and all other applicable laws that protect the Services, the Site and its Content. You agree not to copy, distribute, republish, transmit, publicly display, publicly perform, modify, adapt, rent, sell, or create derivative works of any portion of the Services, the Site or its Content. You also may not, without our prior written consent, mirror or frame any part or whole of the contents of this Site on any other server or as part of any other website. In addition, you agree that you will not use any robot, spider or any other automatic device or manual process to monitor or copy our Content, without our prior written consent (such consent is deemed given for standard search engine technology employed by Internet search websites to direct Internet users to this website).<br><br>
+        3.2       You are welcome to link to the Site from your website, provided that your website does not imply any endorsement by or association with Hababa. You acknowledge that Hababa may, in its sole discretion and at any time, discontinue providing the Services, either in part or as a whole, without notice.<br><br><br>
+        </p>
+        
+        <p><strong>4.SOFTWARE</strong><br><br>
+        Any software provided by us to you as part of the Services is subject to the provisions of these Terms of Service. Hababa reserves all rights to the software not expressly granted by Hababa hereunder. Any third-party scripts or code, linked to or referenced from the Services, are licensed to you by the third parties that own such scripts or code, not by Hababa.<br><br><br>
+        </p>
+        
+        <p><strong>5. ACCOUNTS AND SECURITY</strong><br><br>
+        5.1     Some functions of our Services require registration for an Account by selecting a unique user identification ("User ID") and password, and by providing certain personal information. If you select a User ID that Hababa, in its sole discretion, finds offensive or inappropriate, Hababa has the right to suspend or terminate your Account. You may be able to use your Account to gain access to other products, websites or services to which we have enabled access or with which we have tied up or collaborated. Hababa has not reviewed, and assumes no responsibility for any third party content, functionality, security, services, privacy policies, or other practices of those products, websites or services. If you do so, the terms of service for those products, websites or services, including their respective privacy policies, if different from these Terms of Service and/or our Privacy Policy, may also apply to your use of those products, websites or services.<br><br>
+        5.2     You agree to (a) keep your password confidential and use only your User ID and password when logging in, (b) ensure that you log out from your account at the end of each session on the Site, (c) immediately notify Hababa of any unauthorised use of your Account, User ID and/or password, and (d) ensure that your Account information is accurate and up-to-date. You are fully responsible for all activities that occur under your User ID and Account even if such activities or uses were not committed by you. Hababa will not be liable for any loss or damage arising from unauthorised use of your password or your failure to comply with this Section.<br><br>
+        5.3     You agree that Hababa may for any reason, in its sole discretion and with or without notice or liability to you or any third party, immediately terminate your Account and your User ID, remove or discard from the Site any Content associated with your Account and User ID, withdraw any subsidies offered to you, cancel any transactions associated with your Account and User ID, temporarily or in more serious cases permanently withhold any sale proceeds or refunds, and/or take any other actions that Hababa deems necessary. Grounds for such actions may include, but are not limited to, actual or suspected (a) extended periods of inactivity, (b) violation of the letter or spirit of these Terms of Service, (c) illegal, fraudulent, harassing, defamatory, threatening or abusive behaviour (d) having multiple user accounts, (e) buying products on the Site for the purpose of commercial re-sale, (f) abnormal or excessive purchase of products from the same Seller or related group of Sellers, (g) voucher abuse (including, but not limited to, selling of vouchers to third parties, selling of vouchers or other credits at a significant markup above face value and/or abnormal or excessive use of vouchers on the Site), or (h) behaviour that is harmful to other Users, third parties, or the business interests of Hababa. Use of an Account for illegal, fraudulent, harassing, defamatory, threatening or abusive purposes may be referred to law enforcement authorities without notice to you. If a legal dispute arises or law enforcement action is commenced relating to your Account or your use of the Services for any reason, Hababa may terminate your Account immediately with or without notice.<br><br>
+        5.4     Users may terminate their Account if they notify Hababa in writing (including via email at support) of their desire to do so. Notwithstanding any such termination, Users remain responsible and liable for any incomplete transaction (whether commenced prior to or after such termination), shipment of the product, payment for the product, or the like, and Users must contact Hababa after he or she has promptly and effectively carried out and completed all incomplete transactions according to the Terms of Service. Hababa shall have no liability, and shall not be liable for any damages incurred due to the actions taken in accordance with this Section. Users waive any and all claims based on any such action taken by Hababa.<br><br>
+        5.5        You may only use the Services and/or open an Account if you are located in one of our approved countries, as updated from time to time.<br><br><br>
+        </p>
+        
+        <p><strong>6.TERM OF USE</strong><br><br>
+        6.1        The license for use of this Site and the Services is effective until terminated. This license will terminate as set forth under these Terms of Service or if you fail to comply with any term or condition of these Terms of Service. In any such event, Hababa may effect such termination with or without notice to you.<br><br>
+        6.2        You agree not to:<br><br>
+        (a)        upload, post, transmit or otherwise make available any Content that is unlawful, harmful, threatening, abusive, harassing, alarming, distressing, tortuous, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable;<br><br>
+        (b)        violate any laws, including without limitation any laws and regulation in relation to export and import restrictions, third party rights or ourProhibited and Restricted Items policy;<br><br>
+        (c)         upload, post, transmit or otherwise make available any Content featuring an unsupervised minor or use the Services to harm minors in any way;<br><br>
+        (d)        use the Services or upload Content to impersonate any person or entity, or otherwise misrepresent your affiliation with a person or entity;<br><br>
+        (e)        forge headers or otherwise manipulate identifiers in order to disguise the origin of any Content transmitted through the Services;<br><br>
+        (f)         remove any proprietary notices from the Site;<br><br>
+        (g)        cause, permit or authorize the modification, creation of derivative works, or translation of the Services without the express permission of Hababa;<br><br>
+        (h)        use the Services for the benefit of any third party or any manner not permitted by the licenses granted herein;<br><br>
+        (i)          use the Services or upload Content in a manner that is fraudulent, unconscionable, false, misleading or deceptive;<br><br>
+        (j)          open and/or operate multiple user accounts in connection with any conduct that violates either the letter or spirit of these Terms of Service;<br><br>
+        (k)         access the Hababa platform, open a user account, or otherwise access your user account using an emulator, simulator, bot or other similar hardware or software;<br><br>
+        (l)          manipulate the price of any item or interfere with other User's listings;<br><br>
+        (m)       take any action that may undermine the feedback or ratings systems;<br><br>
+        (n)       attempt to decompile, reverse engineer, disassemble or hack the Services (or any portion thereof), or to defeat or overcome any encryption technology or security measures implemented by Hababa with respect to the Services and/or data transmitted, processed or stored by Hababa;<br><br>
+        (o)       harvest or collect any information about or regarding other Account holders, including, without limitation, any personal data or information;<br><br>
+        (p)     upload, email, post, transmit or otherwise make available any Content that you do not have a right to make available under any law or under contractual or fiduciary relationships (such as inside information, proprietary and confidential information learned or disclosed as part of employment relationships or under nondisclosure agreements);<br><br>
+        (q)      upload, email, post, transmit or otherwise make available any Content that infringes any patent, trademark, trade secret, copyright or other proprietary rights of any party;<br><br>
+        (r)      upload, email, post, transmit or otherwise make available any unsolicited or unauthorised advertising, promotional materials, "junk mail", "spam", "chain letters", "pyramid schemes", or any other unauthorised form of solicitation;<br><br>
+        (s)     upload, email, post, transmit or otherwise make available any material that contains software viruses, worms, Trojan-horses or any other computer code, routines, files or programs designed to directly or indirectly interfere with, manipulate, interrupt, destroy or limit the functionality or integrity of any computer software or hardware or data or telecommunications equipment;<br><br>
+        (t)     disrupt the normal flow of dialogue, cause a screen to "scroll" faster than other Users of the Services are able to type, or otherwise act in a manner that negatively affects other Users' ability to engage in real time exchanges;
+        <br><br>
+        (u)    interfere with, manipulate or disrupt the Services or servers or networks connected to the Services or any other User's use and enjoyment of the Services, or disobey any requirements, procedures, policies or regulations of networks connected to the Site;
+        <br><br>
+        (v)     take any action or engage in any conduct that could directly or indirectly damage, disable, overburden, or impair the Services or the servers or networks connected to the Services;<br><br>
+        (w)    use the Services to intentionally or unintentionally violate any applicable local, state, national or international law, rule, code, directive, guideline, policy or regulation including, without limitation, laws and requirements (whether or not having the force of law) relating to anti-money laundering or counter-terrorism;<br><br>
+        (x)    use the Services in violation of or to circumvent any sanctions or embargo administered or enforced by the U.S. Department of Treasury’s Office of Foreign Assets Control, the United Nations Security Council, the European Union or Her Majesty’s Treasury;<br><br>
+        (y)     use the Services to violate the privacy of others or to "stalk" or otherwise harass another;<br><br>
+        (z)     infringe the rights of Hababa, including any intellectual property rights and any passing off of the same thereof;<br><br>
+        (aa)     use the Services to collect or store personal data about other Users in connection with the prohibited conduct and activities set forth above; and/or<br><br>
+        (bb)     list items which infringe upon the copyright, trademark or other intellectual property rights of third parties or use the Services in a manner which will infringe the intellectual property rights of others.<br><br>
+        6.3     You understand that all Content, whether publicly posted or privately transmitted, is the sole responsibility of the person from whom such Content originated. This means that you, and not Hababa, are entirely responsible for all Content that you upload, post, email, transmit or otherwise make available through the Site. You understand that by using the Site, you may be exposed to Content that you may consider to be offensive, indecent or objectionable. To the maximum extent permitted by applicable law, under no circumstances will Hababa be liable in any way for any Content, including, but not limited to, any errors or omissions in any Content, or any loss or damage of any kind incurred as a result of the use of, or reliance on, any Content posted, emailed, transmitted or otherwise made available on the Site.<br><br>
+        6.4     You acknowledge that Hababa and its designees shall have the right (but not the obligation) in their sole discretion to pre-screen, refuse, delete, stop, suspend, remove or move any Content, including without limitation any Content or information posted by you, that is available on the Site without any liability to you. Without limiting the foregoing, Hababa and its designees shall have the right to remove any Content (i) that violates these Terms of Service or our Prohibited and Restricted Items Policy; (ii) if we receive a complaint from another User; (iii) if we receive a notice or allegation of intellectual property infringement or other legal instruction or request for removal; or (iv) if such Content is otherwise objectionable. We may also block delivery of a communication (including, without limitation, status updates, postings, messages and/or chats) to or from the Services as part of our effort to protect the Services or our Users, or otherwise enforce the provisions of these Terms and Conditions. You agree that you must evaluate, and bear all risks associated with, the use of any Content, including, without limitation, any reliance on the accuracy, completeness, or usefulness of such Content. In this regard, you acknowledge that you have not and, to the maximum extent permitted by applicable law, may not rely on any Content created by Hababa or submitted to Hababa, including, without limitation, information in Hababa Forums and in all other parts of the Site.<br><br>
+        6.5     You acknowledge, consent to and agree that Hababa may access, preserve and disclose your Account information and Content to any legal, regulatory, or governmental authority, the relevant rights owner, or other third parties if required to do so by law pursuant to an order of a court or lawful request by any governmental or regulatory authority having jurisdiction over Hababa or in a good faith belief that such access preservation or disclosure is reasonably necessary to: (a) comply with legal process; (b) enforce these Terms of Service or our Prohibited and Restricted Items Policy; (c) respond to claims that any Content violates the rights of third parties, including intellectual property rights; (d) respond to your requests for customer service; or (e) protect the rights, property or personal safety of Hababa, its Users and/or the public.<br><br><br>
+        </p>
+        <p><strong>7.VIOLATION OF OUR TERMS OF SERVICE</strong><br><br>
+        7.1 Violations of this policy may result in a range of actions, including, without limitation, any or all of the following:<br><br>
+        -            Listing deletion<br>
+        -            Limits placed on Account privileges<br>
+        -            Account suspension and subsequent termination<br>
+        -            Criminal charges<br>
+        -            Civil actions, including without limitation a claim for damages and/or interim or injunctive relief<br><br>
+        7.2        If you believe a User on our Site is violating these Terms of Service, please contact help@support.Hababa.com.my.<br><br>
+        
+        </p>
+        <p><strong>8.REPORTING INTELLECTUAL PROPERTY RIGHTS INFRINGEMENT</strong><br><br>
+        8.1        As stated above, Hababa does not allow listings that violate the intellectual property rights of brands or other intellectual property rights owners (“IPR Owner”).<br><br>
+        8.2        Except where expressly stated otherwise, the  Users are independent individuals or businesses and they are not associated with Hababa in any way and Hababa is neither the agent nor representative of the Users and does not hold and/or own any of the merchandises listed on the Site.<br><br>
+        8.3      If you are an IPR Owner or an agent duly authorised by an IPR Owner (“IPR Agent”) and you believe that your right or your principal’s right has been infringed, please notify us by submitting the online form at https://Hababa-support.formstack.com/forms/ipr_myand provide us the documents requested below to support your claim. Do allow us time to process the information provided. Hababa will respond to your complaint as soon as practicable.<br><br>
+        8.4        Complaints under this Section 8 must be provided in the form prescribed by Hababa, which may be updated from time to time, and must include at least the following: (a) a physical or electronic signature of an IPR Owner or IPR Agent (collectively, “Informant”); (b) a description of the type and nature of intellectual property right that is allegedly infringed and proof of rights; (c ) a description of the nature of alleged infringement with sufficient details to enable Hababa to assess the complaint (d) URL(s) of the listing(s) which contain the alleged infringement; (e) sufficient information to allow Hababa to contact the Informant, such as Informant’s physical address, telephone number and e-mail address; (f) a statement by Informant that the complaint is filed on good faith belief and that the use of the intellectual property as identified by the Informant is not authorised by the IPR Owner or the law; (g) a statement by the Informant that the information in the notification is accurate, that the Informant will indemnify us for any damages we may suffer as a result of the information provided by the Informant and that the Informant has the appropriate right or is authorised to act on the IPR Owner’s behalf in all matters relating to the complaint.<br><br>
+        8.5        Hababa acknowledges a manufacturer’s right to enter into certain exclusive distribution agreements or minimum advertised price agreements for its products. However, violations of such agreements do not constitute intellectual property rights infringement. As the enforcement of these agreements is a matter between the manufacturer and the sellers, Hababa does not assist in this type of enforcement activity and does not enforce exclusive distribution rights or price-control matters except within the countries that have laws specifically governing selective or exclusive distribution.<br><br>
+        8.6        Each and every Seller agrees to hold Hababa and its Affiliates harmless from all claims, causes of action, damages and judgments arising out of any removal of any Content or product listings pursuant to or in relation to any intellectual property infringement claim<br><br><br>
+        
+     </p> 
+     <p>
+        <strong>9. PURCHASE AND PAYMENT</strong><br><br>
+        9.1       Hababa supports one or more of the following payment methods in each country it operates in:<br><br>
+        (i)        Credit Card<br><br>
+        Card payments are processed through third-party payment channels and the type of credit cards accepted by these payment channels may vary depending on the jurisdiction you are in.<br><br>
+        (ii)        Cash on Delivery (COD)<br><br>
+        Hababa provides COD services in selected countries. Buyers may pay cash directly to the deliver agent upon their receipt of the purchased item.<br><br>
+        (iii)       Bank Transfer<br><br>
+        Buyer may make payments through an Automated Teller Machine or internet bank transfer (“Bank Transfer”) to our designated Hababa Guarantee Account (as defined in Section 12). Buyer must provide Hababa with the transfer receipt or payment transaction reference for verification purposes through the ‘Upload Receipt’ function found in Hababa’s app as payment confirmation. If payment confirmation is not received by Hababa within three (3) days, Buyer’s order will be cancelled.<br><br>
+        (iv)      Instalment Purchase Plan<br><br>
+        Buyers may pay via instalment for orders exceeding RM 500. Payment via instalments are processed through third-party channels. The banks that currently support instalment plans are Maybank and Publicbank .<br><br>
+        9.2      Buyer may only change their preferred mode of payment for their purchase prior to making payment.<br><br>
+        9.3      Hababa takes no responsibility and assume no liability for any loss or damages to Buyer arising from shipping information and/or payment information entered by Buyer or wrong remittance by Buyer in connection with the payment for the items purchased. We reserve the right to check whether Buyer is duly authorised to use certain payment method, and may suspend the transaction until such authorisation is confirmed or cancel the relevant transaction where such confirmation is not available.<br><br><br>
+    </p>
+        
+    <p><strong>10. SELLER WALLET</strong> <br><br>
+        10.1     Your Account allows the storage of money you receive from your sales proceeds made on the Platform (“Seller Wallet”). The sum of this money, minus any withdrawals, will be reflected as your Seller Wallet’s balance.<br><br>
+        10.2     You may transfer funds from your Seller Wallet (up to the amount of your Hababa Wallet balance) to your linked bank account (“Linked Account”) by submitting a transfer request (“Withdrawal Request”) a maximum of once per day. Hababa may also automatically transfer funds from your Seller Wallet to your Linked Account on a regular basis, as determined by Hababa. Hababa shall only process such transfers on business days and such transfers may take up to two business days to be credited to your Linked Account.<br><br>
+        10.3     Sellers are entitled to one (1) free Withdrawal Request per week (“Weekly Withdrawal Limit”). Hababa may impose a fee of RM0.12 for each additional Withdrawal Request made in excess of the Weekly Withdrawal Limit (“Withdrawal Fee”). The Withdrawal Fee is subjected to Sales and Service Tax (“SST”). The Weekly Withdrawal Limit and the Withdrawal Fee are subject to change at Hababa’s discretion.<br><br>
+        10.4     Money from your sale of items on Hababa shall be credited to your Seller Wallet within three (3) days after the item is delivered to Buyer or immediately after Buyer has acknowledged that they have received the item.<br><br>
+        10.5     Once submitted, you may not modify or cancel a Withdrawal Request.<br><br>
+        10.6    If there is an error in the processing of any transaction, you authorize us to initiate debit or credit entries to your designated bank account, to correct such error, provided that any such correction is made in accordance with applicable laws and regulations. If we are unable to debit your designated bank account for any reason, you authorize us to resubmit the debit, plus any applicable fees, to any other bank account or payment instrument that you have on file with us or to deduct the debit and applicable fees from your Seller Wallet in the future. If we are unable to credit your Alternative Account, for any reason, we reserve our right to handle or process such money in accordance with the applicable law, including the Unclaimed Moneys Act 1965.<br><br>
+        10.7     You authorize us to initiate debit or credit entries to your Seller Wallet:<br><br>
+        (i)                 to correct any errors in the processing of any transaction;<br><br>
+        (ii)                where Hababa has determined that you have engaged in fraudulent or suspicious activity and/or transactions;<br><br>
+        (iii)               in connection with any lost, damaged or incorrect items;<br><br>
+        (iv)               in connection with any rewards or rebates;<br><br>
+        (v)                in connection with any uncharged fees;<br><br>
+        (vi)               in connection with the settlement of any transaction dispute, including any compensation due to, or from, you;<br><br>
+        (vii)              in connection with any banned items or items that are detained by customs;
+        <br><br>
+        (viii)               in connection with any change of mind agreed to by both Buyer and Seller; and
+        <br><br>
+        (ix)               to purchase Advertising Credits where you have activated the Advertising Credits Top Up Feature and your Advertising Credits have fallen below your Advertising Credits Minimum Amount.
+        <br><br>
+    </p>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+    <form class="form-container1">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+
+        <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+    <!-- -------- footer -------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+            
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                    
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>

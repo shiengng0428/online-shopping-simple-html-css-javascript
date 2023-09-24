@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hababa | Malaysia </title>
+    <link rel="icon" href="images/HABABA.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <style>
+        .btn-primary1 {
+            padding: 0.2px;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+           
+        }
+
+            .btn-primary1 > .total-count {
+                position: absolute;
+                background-color: black;
+                margin-left: -12.5px;
+                margin-top: -1px;
+                padding: 4px 5.5px;
+                border-radius: 30px;
+            }
+
+            .btn-primary1:hover {
+                background-color: white;
+                transition: all 200ms ease-in-out;
+                border-radius: 20px;
+            }
+
+            .card > img{
+                max-height: 235px;
+                max-width: 235px;
+            }
+
+            .card-block{
+                padding-right: 5px;
+            }
+
+            .card{
+                height: 450px;
+                position: relative;
+            }
+
+            .add-to-cart{
+               position: absolute;
+               bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="size">
+            <div>
+            <a href="index.html"><img src="images/HABABA.png" alt="MainLogo" width="250" style="float: left;padding: 25px;"></a>
+            </div>
+            <nav> 
+                <br/><br/><br/>
+                <a id="navicon" href="#"><img src="images/menu.png" class="menu-icon"></a>
+                <ul>
+                    <li class="nav_btn"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn"><a href="#">Products</a></button>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#">Fashion</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Fashion_Man.html">Man</a></li>
+                                    <li><a href="Fashion_Women.html">Women</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Furniture</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Furniture.html">Furniture</a></li>
+                                    <li><a href="Furniture_Home.html">Mattress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Digital Electronics</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Digital_Computer.html">Computer & Laptop</a></li>
+                                    <li><a href="Digital_Mobile.html">Mobile & Tablet</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Food</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="Food_Snack.html">Snack</a></li>
+                                    <li><a href="Food_Drink.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Household Appliance</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="HouseHold_Utensil.html">Utensil</a></li>
+                                    <li><a href="HouseHold_Cleaning.html">Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                        </ul>   
+                    </li>
+                    <li class="nav_btn"><a href="About_Us.html">About</a></li>
+                    <li class="nav_btn"><a href="Contact_Us.html">Contact</a></li>
+                    <li class="nav_btn"><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <button type="button" onclick="location.href='Cart.html'" class="btn btn-primary1" data-toggle="modal" data-target="#cart">
+                            <img class="nav_btn3" src="images/cart.png" width="45" height="45" style="padding:5px;" />
+                            <span class="total-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="Account.html"><img class="nav_btn2" src="images/login.png" width="50" height="50" style="padding:5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div class="small-container">
+        <input class="box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+        <div class="header1" style="text-align:center">
+            <h1>Utensils</h1>
+        </div>
+        <div class="search_list">
+            <div class="addto-playlists">
+                <ul>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Type</h6>
+                            </li>
+                            <li>
+                                <input id="spatula" type="checkbox" value="spatula" name="UtensilType">
+                                <label for="spatula">Spatulas & Ladles</label>
+                            </li>
+                            <li>
+                                <input id="fork" type="checkbox" value="fork" name="UtensilType">
+                                <label for="fork">Forks & Spoons</label>
+                            </li>
+                            <li>
+                                <input id="bowl" type="checkbox" value="bowl" name="UtensilType">
+                                <label for="bowl">Bowls</label>
+                            </li>
+                            <li>
+                                <input id="knife" type="checkbox" value="knife" name="UtensilType">
+                                <label for="knife">Knifes</label>
+                            </li>
+                            <li>
+                                <input id="pan" type="checkbox" value="pan" name="UtensilType">
+                                <label for="pan">Pans & Pots</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="fil_list">
+                            <li>
+                                <h6>By Uses</h6>
+                            </li>
+                            <li>
+                                <input id="baking" type="checkbox" value="baking" name="UtensilUses">
+                                <label for="baking">Baking</label>
+                            </li>
+                            <li>
+                                <input id="cooking" type="checkbox" value="cooking" name="UtensilUses">
+                                <label for="cooking">Cooking</label>
+                            </li>
+                            <li>
+                                <input id="lunch" type="checkbox" value="lunch" name="UtensilUses">
+                                <label for="lunch">Eating</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="small-container">
+            <ul id="myUL" class="row">
+                <li class="card col-4 baking utensilT">
+                    <img class="card-img-top" src="utensil/10-Inches-Stainless-Steel-Egg-Beater-Hand-Blender-Spiral-Wire-Whisk-Mixer-For-Baking-Cooking-Tools__40163.1519031598.webp" alt="10-Inches-Stainless-Steel-Egg-Beater-Hand-Blender-Spiral-Wire-Whisk-Mixer-For-Baking-Cooking-Tools">
+                    <div class="card-block">
+                        <h4 class="card-title">10-Inches Stainless Steel Hand Blender</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="10-Inches_Stainless_Steel_Hand_Blender" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col col-4 pan cooking utensilT">
+                    <img class="card-img-top" src="utensil/annons-pot-with-lid-glass-stainless-steel__0714768_pe730240_s5.webp" alt="annons-pot-with-lid-glass-stainless-steel">
+                    <div class="card-block">
+                        <h4 class="card-title">Annons Pot with Lid-glass Stainless Steel</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM32.00</p>
+                        <a href="#" data-name="Annons_Pot_with_Lid-glass_Stainless_Steel" data-price="32.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pan cooking utensilT">
+                    <img class="card-img-top" src="utensil/cooking-pan.jpg" alt="cooking-pan">
+                    <div class="card-block">
+                        <h4 class="card-title">Cooking Pan</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM32.00</p>
+                        <a href="#" data-name="Cooking_Pan" data-price="32.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 spatula cooking utensilT">
+                    <img class="card-img-top" src="utensil/di-oro-seamless-series-silicone-kitchen-soup-ladle-559950_1243x.jpg" alt="di-oro-seamless-series-silicone-kitchen-soup-ladle">
+                    <div class="card-block">
+                        <h4 class="card-title">Silicone Kitchen Soup Ladle</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Silicone_Kitchen_Soup_Ladle" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 bowl utensilT">
+                    <img class="card-img-top" src="utensil/felder-plastic-kitchen-bowl.jpg" alt="felder-plastic-kitchen-bowl">
+                    <div class="card-block">
+                        <h4 class="card-title">Felder Plastic Kitchen Bowl</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Felder_Plastic_Kitchen_Bowl" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 spatula cooking utensilT">
+                    <img class="card-img-top" src="utensil/flexible-spatula.jpg" height="320" alt="flexible-spatula">
+                    <div class="card-block">
+                        <h4 class="card-title">Flexible Silicone Spatula</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Flexible_Silicone_Spatula" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 pan cooking utensilT">
+                    <img class="card-img-top" src="utensil/frying-pan.jpg" alt="frying-pan">
+                    <div class="card-block">
+                        <h4 class="card-title">Frying Pan</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM22.00</p>
+                        <a href="#" data-name="Frying_Pan" data-price="22.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 utensilT">
+                    <img class="card-img-top" src="utensil/Gera+23cm+Tong.jpg" alt="Gera+23cm+Tong">
+                    <div class="card-block">
+                        <h4 class="card-title">Gera 23cm Tong</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Gera_23cm_Tong" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 baking utensilT">
+                    <img class="card-img-top" src="utensil/glass-measuring-cups.jpg" alt="glass-measuring-cups">
+                    <div class="card-block">
+                        <h4 class="card-title">Glass Measuring Cups</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Glass_Measuring_Cups" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 utensilT">
+                    <img class="card-img-top" src="utensil/idealisk-grater-stainless-steel__0713134_pe729282_s5.webp" alt="idealisk-grater-stainless-steel">
+                    <div class="card-block">
+                        <h4 class="card-title">Idealisk Grater Stainless Steel</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Idealisk_Grater_Stainless_Steel" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 knife cooking utensilT">
+                    <img class="card-img-top" src="utensil/kitchen-knife.jpg" alt="kitchen-knife">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Kitchen Knife</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM22.00</p>
+                        <a href="#" data-name="Stainless_Steel_Kitchen_Knife" data-price="22.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 utensilT">
+                    <img class="card-img-top" src="utensil/kttongs_silo_1000x960_13.jpg" alt="kttongs_silo">
+                    <div class="card-block">
+                        <h4 class="card-title">Tupperware Tongs</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Tupperware_Tongs" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 baking utensilT">
+                    <img class="card-img-top" src="utensil/smaksam-cake-decoration-set__0712273_pe728720_s5.webp" alt="smaksam-cake-decoration-set">
+                    <div class="card-block">
+                        <h4 class="card-title">Smaksam Cake Decoration Set</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM22.00</p>
+                        <a href="#" data-name="Smaksam_Cake_Decoration_Set" data-price="22.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 fork baking utensilT">
+                    <img class="card-img-top" src="utensil/stainless-measuring-spoon-set.jpg" alt="stainless-measuring-spoon-set">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Measuring Spoon Set</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Stainless_Steel_Measuring_Spoon_Set" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 fork cooking lunch utensilT">
+                    <img class="card-img-top" src="utensil/stainless-spoon.jpg" alt="stainless-spoon">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Spoon</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Stainless_Steel_Spoon" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 fork lunch cooking utensilT">
+                    <img class="card-img-top" src="utensil/stainlesssteel-fork.jpg" alt="stainlesssteel-fork">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Fork</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Stainless_Steel_Fork" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 knife cooking utensilT">
+                    <img class="card-img-top" src="utensil/stainless-steel-knife-set-block-17-piece-set-kitchen-knives-set-chef-knif-mart24-2008-24-F2240739_1.jpg"
+                         alt="stainless-steel-knife-set-block-17-piece-set-kitchen-knives-set-chef-knif">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Knife Set 17-set</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM312.00</p>
+                        <a href="#" data-name="Stainless_Steel_Knife_Set_17-set" data-price="312.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 spatula cooking utensilT">
+                    <img class="card-img-top" src="utensil/stainless-steel-spatula.jpg" alt="stainless-steel-spatula">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Spatula</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Stainless_Steel_Spatula" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 baking utensilT">
+                    <img class="card-img-top" src="utensil/Stainless-Steel-Wire-Fine-Mesh-Strainer-Oil-Skimmer-Handheld-Flour-Sifter-Sieve-Colander-Kitchen-Baking-Cooking.jpg_q50.jpg"
+                         alt="Stainless-Steel-Wire-Fine-Mesh-Strainer-Oil-Skimmer-Handheld-Flour-Sifter-Sieve-Colander">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Wire Handheld Flour Sifter</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM12.00</p>
+                        <a href="#" data-name="Stainless_Steel_Wire_Handheld_Flour_Sifter" data-price="12.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 baking utensilT">
+                    <img class="card-img-top" src="utensil/steel-cup-flour-sifter.jpg" alt="steel-cup-flour-sifter">
+                    <div class="card-block">
+                        <h4 class="card-title">Steel Cup Flour Sifter</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM22.00</p>
+                        <a href="#" data-name="Steel_Cup_Flour_Sifter" data-price="22.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 bowl baking utensilT">
+                    <img class="card-img-top" src="utensil/steel-mixing-bowl.jpg" alt="steel-mixing-bowl">
+                    <div class="card-block">
+                        <h4 class="card-title">Stainless Steel Mixing Bowl</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM32.00</p>
+                        <a href="#" data-name="Stainless_Steel_Mixing_Bowl" data-price="32.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+
+                <li class="card col-4 spatula cooking utensilT">
+                    <img class="card-img-top" src="utensil/wooden-ladle.jpg" alt="wooden-ladle">
+                    <div class="card-block">
+                        <h4 class="card-title">Wooden Ladle</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">RM22.00</p>
+                        <a href="#" data-name="Wooden_Ladle" data-price="22.00" class="add-to-cart btn btn-primary">Buy Now &#8594;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container1">
+            <h1>Chat</h1>
+    
+            <label for="msg"><b>Message</b></label>
+            <textarea id="text_message" placeholder="Type message.." name="msg" required></textarea>
+    
+            <button onclick="myFunction10()" type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    <br>
+    <!-- -------- footer -------- -->
+        
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our APP</h3>
+                    <p>Download APP for Android and IOS mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png"></a>
+                        <img src="images/app-store.png"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col-2">
+                    <a href="#"><img src="images/HABABA.png" alt=""></a>
+                    <p>Hababa is an exciting new way to shop, hassle-free in the convenience of your home 24 hours a day. Shop for the world's most popular brands in beauty, electronics, fashion and more at unbeatable prices and free delivery with Hababa in Malaysia. Explore our collection of the world's most sought after brands hassle-free!. Shop from the comfort of your home or anywhere on the go with Hababa.
+                    </p>
+                        
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Help Center</h3>
+                <ul>
+                        <a href="faq.html"><li>FAQ</li></a>
+                        <a href="timeframe.html"><li>Terms & Conditions</li></a>
+                        <a href="timeframe.html"><li>Privacy Notice</li></a>
+                        <a href="Contact_Us.html"><li>Contact Us</li></a>
+                </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a href="https://twitter.com/"><li>Twitter</li></a> 
+                    <a href="https://www.Instagram.com/"><li>Instagram</li></a>
+                    <a href="https://www.Youtube.com/"><li>Youtube</li></a>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright© 2021. Hababa Sdn Bhd (Company Reg. No. 201401005001 (1081077-X)) AJL932198. All Rights Reserved. (VER: 3.0.0)</p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Search Product List
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Checkbox Search
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        var allUtensils = Array.from(document.querySelectorAll('.utensilT'));
+        var checked = {};
+
+        getChecked('UtensilType');
+        getChecked('UtensilUses');
+        //  getChecked('injured');
+
+
+        Array.prototype.forEach.call(allCheckboxes, function (el) {
+            el.addEventListener('change', toggleCheckbox);
+        });
+
+        function toggleCheckbox(e) {
+            getChecked(e.target.name);
+            setVisibility();
+        }
+
+        function getChecked(name) {
+            checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+                return el.value;
+            });
+        }
+
+        function setVisibility() {
+            allUtensils.map(function (el) {
+                var UtensilType = checked.UtensilType.length ? _.intersection(Array.from(el.classList), checked.UtensilType).length : true;
+                var UtensilUses = checked.UtensilUses.length ? _.intersection(Array.from(el.classList), checked.UtensilUses).length : true;
+
+                if (UtensilType && UtensilUses) {
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="Cart_general.js"></script>
+</body>
+</html>
